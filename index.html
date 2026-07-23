@@ -10,130 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        html { scroll-behavior: smooth; }
-        
-        /* Orange & Light Sandal / Cream Theme Palette */
-        :root {
-            --primary-orange: #ff6600;
-            --primary-orange-hover: #e55c00;
-            --light-sandal: #fdfbf7;
-            --light-sandal-alt: #f4efdb;
-            --text-dark: #1a1a1a;
-            --border-sandal: #e6dfcc;
-        }
-
-        body {
-            background-color: var(--light-sandal);
-            color: var(--text-dark);
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        }
-
-        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
-        .navbar {
-            background-color: var(--light-sandal) !important;
-            border-bottom: 1px solid var(--border-sandal);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-        }
-        .navbar-brand img {
-            max-height: 40px;
-            width: auto;
-        }
-        .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-orange) !important;
-        }
-
-        /* Hero Section: Warm Orange Gradient with 100% White Text */
-        .hero-section {
-            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
-            color: #ffffff;
-            padding: 130px 0 90px 0;
-            border-bottom: 4px solid var(--primary-orange);
-        }
-
-        .badge-custom {
-            background-color: var(--primary-orange);
-            color: #ffffff;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 4px;
-        }
-
-        .btn-primary-custom {
-            background-color: var(--primary-orange);
-            border-color: var(--primary-orange);
-            color: #ffffff;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        .btn-primary-custom:hover {
-            background-color: var(--primary-orange-hover);
-            border-color: var(--primary-orange-hover);
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline-custom {
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            font-weight: 600;
-            border-radius: 6px;
-            background: transparent;
-            transition: all 0.2s;
-        }
-        .btn-outline-custom:hover {
-            background-color: #ffffff;
-            color: var(--text-dark);
-        }
-
-        /* Cards & Sections with Sandal Background */
-        .clickable-card {
-            background-color: #ffffff;
-            border: 1px solid var(--border-sandal);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .clickable-card:hover {
-            border-color: var(--primary-orange) !important;
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(255, 102, 0, 0.12);
-        }
-
-        .detail-section {
-            scroll-margin-top: 100px;
-            background-color: var(--light-sandal);
-            color: var(--text-dark);
-            border-left: 5px solid var(--primary-orange);
-            border-bottom: 1px solid var(--border-sandal);
-            padding: 80px 0;
-        }
-
-        .detail-section.bg-alt {
-            background-color: var(--light-sandal-alt);
-        }
-
-        .feature-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid var(--border-sandal);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-dark);
-            color: #ffffff;
-            border-top: 3px solid var(--primary-orange);
-        }
-    </style>
 </head>
 <body>
 
@@ -158,7 +34,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Training Image -->
     <header class="hero-section mt-5">
         <div class="container py-4">
             <div class="row align-items-center">
@@ -166,39 +42,39 @@
                     <span class="badge badge-custom mb-3">Centre for Apparel Research and Education</span>
                     <h1 class="display-5 fw-bold mb-3 text-white">NIFT-TEA CARE Division</h1>
                     <p class="lead text-light opacity-87 mb-4">Strengthening the research capacity of Tirupur apparel, textile, and rural industries through active R&D, advanced training, and technological support for MSMEs.</p>
-                    <a href="services.html" class="btn btn-primary-custom me-2 px-4 py-2"><i class="fa-solid fa-arrow-right me-2"></i>Explore Activities</a>
-                    <a href="about.html" class="btn btn-outline-custom px-4 py-2">Leadership</a>
+                    <a href="#focus-areas" class="btn btn-primary-custom me-2 px-4 py-2"><i class="fa-solid fa-arrow-down me-2"></i>Explore Focus Areas</a>
+                    <a href="about.html" class="btn btn-outline-light px-4 py-2 fw-semibold">Leadership</a>
                 </div>
                 <div class="col-lg-5 mt-4 mt-lg-0 text-center">
-                    <img src="https://th.bing.com/th/id/OIP.ShspgBh5gnn9G1ziDr20twHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="NIFT-TEA CARE Division Training Session" class="img-fluid feature-img shadow-lg" loading="lazy">
+                    <img src="assets/images/training.png" alt="Technology Upgradation Training & Global Workforce" class="img-fluid feature-img shadow-lg" loading="lazy">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Core Focus Areas (4 Clickable Cards) -->
-    <section class="py-5" style="background-color: var(--light-sandal);">
+    <!-- Core Focus Areas (4 Cards linking to internal sections below via smooth scroll) -->
+    <section id="focus-areas" class="py-5 bg-white">
         <div class="container py-4">
-            <div class="text-center">
-                <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Core Focus Areas</h2>
-                <p class="text-muted mb-5">Advancing technology and training in the Tirupur apparel ecosystem. Click any card to explore below.</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2 text-dark">Core Focus Areas & Facilities</h2>
+                <p class="text-muted">Explore our specialized divisions driving technological evolution in Tirupur. Click any card to view details below.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <a href="#rd-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-microscope"></i></div>
-                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">R&D Support</h4>
-                            <p class="text-secondary small">New product & process research and development for industries.</p>
+                            <h4 class="h5 fw-bold text-dark">R&D Support</h4>
+                            <p class="text-secondary small">New product & process research and development for apparel industries.</p>
                             <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#ind-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-industry"></i></div>
-                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Industrialization</h4>
+                            <h4 class="h5 fw-bold text-dark">Industrialization</h4>
                             <p class="text-secondary small">Industrializing innovative new products and manufacturing methods.</p>
                             <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
@@ -206,9 +82,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#diss-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-network-wired"></i></div>
-                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Dissemination</h4>
+                            <h4 class="h5 fw-bold text-dark">Dissemination</h4>
                             <p class="text-secondary small">Effective dissemination of emerging technologies to MSMEs.</p>
                             <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
@@ -216,9 +92,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#train-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-chalkboard-user"></i></div>
-                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Upgradation Training</h4>
+                            <h4 class="h5 fw-bold text-dark">Upgradation Training</h4>
                             <p class="text-secondary small">Specialized technology upgradation training programs.</p>
                             <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
@@ -228,84 +104,83 @@
         </div>
     </section>
 
-    <!-- ELABORATED CONTENT SECTIONS -->
-    
-    <!-- Core Focus Area 01: R&D -->
+    <!-- DETAILED SECTIONS FOR SMOOTH SCROLLING -->
+
+    <!-- 1. R&D Support Detail Section -->
     <section id="rd-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">Core Focus Area 01</span>
-                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Research & Development (R&D) Support</h2>
-                    <p class="text-secondary">The CARE division focuses intensely on Research & Development concerning new apparel products, advanced manufacturing processes, and sustainable technologies to uplift Tirupur industries.</p>
+                    <span class="badge badge-custom mb-2">Research & Development</span>
+                    <h2 class="fw-bold mb-3 text-dark">New Product & Process R&D Support</h2>
+                    <p class="text-secondary">To strengthen the research capacity of Tirupur apparel, textile, and rural industries, CARE division provides dedicated support for formulating innovative prototypes, technical textiles, and optimized manufacturing processes.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Development of automated prototypes like the Upgraded Mat Loom funded by DST.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Research on technical textiles including PBI-blended firefighter suits and carbon-based EMI shielding fabrics.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Sponsored R&D projects backed by DST, NABARD, and MSME grants.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Advanced prototyping for technical wear and sustainable apparel.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://th.bing.com/th/id/OIP.1nNzufnS9JZZsZBvpQs0IgHaEY?w=272&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="R&D Laboratory" class="img-fluid feature-img shadow-sm" loading="lazy">
+                    <img src="assets/images/overview.png" alt="R&D Support Facility" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Focus Area 02: Industrialization -->
-    <section id="ind-detail" class="detail-section bg-alt">
+    <!-- 2. Industrialization Detail Section -->
+    <section id="ind-detail" class="detail-section bg-alt" style="background-color: var(--light-sandal-alt);">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">Core Focus Area 02</span>
-                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Industrialization of New Products & Processes</h2>
-                    <p class="text-secondary">Transitioning laboratory innovations and prototypes into scalable, commercial industrial products for Tirupur MSMEs and rural weaving clusters.</p>
+                    <span class="badge badge-custom mb-2">Advanced Manufacturing</span>
+                    <h2 class="fw-bold mb-3 text-dark">Industrialization of New Products & Processes</h2>
+                    <p class="text-secondary">Transitioning successful lab-scale innovations into robust commercial manufacturing lines. We guide startups and MSMEs through NPI Studio validation, pilot testing, and full-scale industrial scaling.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Field deployment of upgraded automated looms for Chennimalai bedsheet weavers.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Commercialization support under schemes like EDII-TN Innovation Voucher Scheme (IVP).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Scaling sustainable dyeing processes, activated carbon wound dressings, and AI pattern generation.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Process optimization for machinery and automated production systems.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Commercialization mentoring under EDII-TN Innovation Vouchers.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://th.bing.com/th/id/OIP.VsdV88TBJ5KJ5IVLHYQXBQHaEQ?w=319&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Industrial Textile Unit" class="img-fluid feature-img shadow-sm" loading="lazy">
+                    <img src="assets/images/industrialization.png" alt="Industrialization Center" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Focus Area 03: Dissemination -->
+    <!-- 3. Dissemination Detail Section -->
     <section id="diss-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">Core Focus Area 03</span>
-                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Dissemination of New Technologies</h2>
-                    <p class="text-secondary">Spreading awareness, transferring technical knowledge, and promoting modern technological standards to grassroots manufacturers and apparel clusters.</p>
+                    <span class="badge badge-custom mb-2">Knowledge Transfer</span>
+                    <h2 class="fw-bold mb-3 text-dark">Effective Technology Dissemination</h2>
+                    <p class="text-secondary">Bridging the gap between research institutions and grassroots clusters by actively transferring cutting-edge technological standards, awareness programs, and joint industrial exhibitions directly to MSMEs.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Organizing awareness programs, Khadi product exhibition-cum-sales stalls with KVIC.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Conducting student drawing competitions and promoting traditional handloom awareness.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Global network implementation and supply chain integration.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Technical documentation and standard operating procedure sharing.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://th.bing.com/th/id/OIP.Lba3zWiQe91x6jDVg3Pe4QHaD4?w=316&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Technology Dissemination" class="img-fluid feature-img shadow-sm" loading="lazy">
+                    <img src="assets/images/dissemination.png" alt="Dissemination Hub" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Focus Area 04: Training -->
-    <section id="train-detail" class="detail-section bg-alt">
+    <!-- 4. Upgradation Training Detail Section -->
+    <section id="train-detail" class="detail-section bg-alt" style="background-color: var(--light-sandal-alt);">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">Core Focus Area 04</span>
-                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Technology Upgradation Training</h2>
-                    <p class="text-secondary">Equipping industrial technicians, weavers, and self-help group (SHG) members with advanced hands-on operational and technical competencies.</p>
+                    <span class="badge badge-custom mb-2">Workforce Empowerment</span>
+                    <h2 class="fw-bold mb-3 text-dark">Specialized Technology Upgradation Training</h2>
+                    <p class="text-secondary">Empowering the global workforce and local artisans through specialized hands-on technical programs, residential manufacturing courses, and digital skill enhancement workshops.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> NABSKILL 30-day training for Wastewater Treatment Plant Technicians across textile units.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Residential CRP Coat Manufacturing Training for SHG members across Tamil Nadu.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Specialized training frameworks like NABSKILL wastewater and loom operation.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Real-time skill progress tracking and technical mentoring.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://th.bing.com/th/id/OIP.ShspgBh5gnn9G1ziDr20twHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Upgradation Training" class="img-fluid feature-img shadow-sm" loading="lazy">
+                    <img src="assets/images/workshop.png" alt="Upgradation Training Workshop" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
