@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&D Services & Grants | NIFT-TEA CARE Division</title>
+    <title>About Us & Leadership | NIFT-TEA CARE Division</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -12,212 +12,196 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         html { scroll-behavior: smooth; }
-        .clickable-card { cursor: pointer; transition: all 0.3s ease; }
-        .clickable-card:hover { transform: translateY(-5px); border-color: #d4af37 !important; box-shadow: 0 10px 20px rgba(11, 34, 64, 0.15); }
-        .detail-section { scroll-margin-top: 100px; background: #ffffff; border-left: 5px solid #0b2240; transition: all 0.4s ease-in-out; }
+        
+        /* Orange & Light Sandal / Cream Theme Palette */
+        :root {
+            --primary-orange: #ff6600;
+            --primary-orange-hover: #e55c00;
+            --light-sandal: #fdfbf7;
+            --light-sandal-alt: #f4efdb;
+            --text-dark: #1a1a1a;
+            --border-sandal: #e6dfcc;
+        }
+
+        body {
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
+        .navbar {
+            background-color: var(--light-sandal) !important;
+            border-bottom: 1px solid var(--border-sandal);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        /* Page Header: Warm Orange Gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 130px 0 90px 0;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .badge-custom {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-orange-hover);
+            border-color: var(--primary-orange-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Cards with Sandal Background */
+        .card-glass {
+            background-color: #ffffff;
+            border: 1px solid var(--border-sandal);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+        .card-glass:hover {
+            border-color: var(--primary-orange) !important;
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            border-top: 3px solid var(--primary-orange);
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <i class="fa-solid fa-graduation-cap text-warning fs-3 me-2"></i>
-                <span>NIFT-TEA <small class="d-block text-light opacity-75" style="font-size: 0.65rem;">CARE DIVISION</small></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">R&D & Grants</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About & Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="hero-section text-center py-5 mt-5">
+    <header class="hero-section text-center mt-5">
         <div class="container py-4">
-            <span class="badge badge-custom mb-3">Grants & Collaborations</span>
-            <h1 class="display-4 fw-bold mb-3">R&D Projects & Funding Schemes</h1>
-            <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Active collaborative activities with DST, MSME, EDII-TN, NABARD, and TNSRLM for FY 2025–2026.</p>
+            <span class="badge badge-custom mb-3">Institutional Overview</span>
+            <h1 class="display-4 fw-bold mb-3 text-white">About CARE Division</h1>
+            <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Centre for Apparel Research and Education (CARE) at NIFT-TEA Knitwear Fashion Institute.</p>
         </div>
     </header>
 
-    <!-- Skill Initiatives Cards -->
-    <section class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">NABARD & TNSRLM Skill Initiatives</h2>
-                <p class="text-muted">Click any initiative card below to explore full details.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <a href="#nabskill-detail" class="text-decoration-none">
-                        <div class="card card-custom p-4 h-100 clickable-card">
-                            <div class="text-warning fs-2 mb-3"><i class="fa-solid fa-water"></i></div>
-                            <h4 class="h5 fw-bold text-dark">NABSKILL Training</h4>
-                            <p class="text-secondary small">30-day skill development program on Wastewater Treatment Plant Technician for 80 technicians[cite: 1].</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#nabard-detail" class="text-decoration-none">
-                        <div class="card card-custom p-4 h-100 clickable-card">
-                            <div class="text-warning fs-2 mb-3"><i class="fa-solid fa-industry"></i></div>
-                            <h4 class="h5 fw-bold text-dark">NABARD DPR Project</h4>
-                            <p class="text-secondary small">Upgrading Chennimalai power loom bedsheet weavers' looms with electronic systems[cite: 1].</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#tnsrlm-detail" class="text-decoration-none">
-                        <div class="card card-custom p-4 h-100 clickable-card">
-                            <div class="text-warning fs-2 mb-3"><i class="fa-solid fa-people-group"></i></div>
-                            <h4 class="h5 fw-bold text-dark">TNSRLM & KVIC</h4>
-                            <p class="text-secondary small">Technical Support Agency for Higher Order Enterprises and CRP Coat Training[cite: 1].</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Sections with Accurate Images -->
-    <section id="nabskill-detail" class="py-5 detail-section my-4">
+    <!-- About & Mission Section -->
+    <section class="py-5" style="background-color: var(--light-sandal);">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">NABSKILL Scheme[cite: 1]</span>
-                    <h2 class="fw-bold mb-3">Wastewater Treatment Plant Technician Training</h2>
-                    <p class="text-secondary">Conducted a 30-day skill development programme for 80 technicians from four textile processing units: Sri Sowbarnika Tex, SRG Apparels Ltd., Best Textile Process, and Shine Process[cite: 1].</p>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Candidates selected through rigorous Project Monitoring Committee (PMC) interviews[cite: 1].</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Hands-on practical exposure on plant operations, maintenance, and water quality monitoring[cite: 1].</li>
-                    </ul>
+                    <h2 class="fw-bold mb-4" style="color: var(--text-dark);">Empowering Tirupur Industries Through Advanced R&D</h2>
+                    <p class="text-secondary">To strengthen the research capacity of Tirupur apparel, textile, and rural industries, NIFT-TEA active engagement goes beyond talent pool training. We provide comprehensive research and technology developmental support (new product/process R&D and dissemination) to MSMEs.</p>
+                    <p class="text-secondary">Our core objectives focus on technology upgradation training, industrialization of new processes, and fostering sustainable rural development initiatives.</p>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Training Session" class="img-fluid rounded-4 shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="nabard-detail" class="py-5 bg-white detail-section my-4">
-        <div class="container py-4">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">NABARD Scheme[cite: 1]</span>
-                    <h2 class="fw-bold mb-3">Chennimalai Power Loom Upgradation</h2>
-                    <p class="text-secondary">Improving livelihood levels of rural weavers by upgrading conventional looms with electronic tuck-in, let-off, and take-off technologies[cite: 1].</p>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Prototype upgraded loom successfully developed and tested for bedsheet production[cite: 1].</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Provided practical training to 18 weavers and operators; currently in field deployment[cite: 1].</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Weaving Loom Technology" class="img-fluid rounded-4 shadow-lg">
+                <div class="col-lg-6">
+                    <div class="card card-glass p-4 border-0">
+                        <h4 class="fw-bold mb-3" style="color: var(--primary-orange);"><i class="fa-solid fa-bullseye me-2"></i>Our Key Objectives</h4>
+                        <ul class="list-unstyled mb-0 text-secondary">
+                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Research & Development on new products and technologies.</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Industrialization of innovative manufacturing processes.</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Dissemination of advanced technological standards.</li>
+                            <li class="mb-0"><i class="fa-solid fa-check text-success me-2"></i> Comprehensive technology upgradation training.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tnsrlm-detail" class="py-5 detail-section my-4">
-        <div class="container py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-custom mb-2">TNSRLM & KVIC[cite: 1]</span>
-                    <h2 class="fw-bold mb-3">Higher Order Enterprises & Skill Programs</h2>
-                    <p class="text-secondary">Acting as Technical Support Agency (TSA) for Higher Order Enterprises across Tenkasi, Krishnagiri, Ariyalur, and Tiruppur clusters[cite: 1].</p>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Conducted 3-day residential CRP Coat Manufacturing Training for 24 SHG members[cite: 1].</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Organized student drawing competitions and Khadi product exhibition-cum-sales stalls[cite: 1].</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Meeting and Conference" class="img-fluid rounded-4 shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDII-TN Innovation Voucher Scheme Table Section -->
-    <section class="py-5 bg-light">
+    <!-- Leadership Section -->
+    <section class="py-5" style="background-color: var(--light-sandal-alt);">
         <div class="container py-4">
             <div class="text-center mb-5">
-                <h2 class="section-title">EDII-TN Innovation Voucher Scheme (IVP)</h2>
-                <p class="text-muted">Research and technical guidance support provided as knowledge partner[cite: 1].</p>
+                <h2 class="section-title fw-bold" style="color: var(--text-dark);">Leadership & Guidance</h2>
+                <p class="text-muted">Visionary leadership steering the FY 2025–2026 milestones.</p>
             </div>
-            <div class="table-responsive card card-custom p-3 border-0 shadow-sm">
-                <table class="table table-hover align-middle mb-0">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>S.No</th>
-                            <th>Applicant Company & Name[cite: 1]</th>
-                            <th>Project Title[cite: 1]</th>
-                            <th>Progress & Grant[cite: 1]</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><strong>JM TECHY</strong><br><small class="text-muted">Prabhakaran P</small>[cite: 1]</td>
-                            <td>Optimization and Scaling Up of Sustainable Dyeing Process & Auxiliaries for Textile Dyeing Industries[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹3,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><strong>MIRAYPAN CARBONS PVT LTD</strong><br><small class="text-muted">S.R. Patrick Dhanaseelan</small>[cite: 1]</td>
-                            <td>Optimization & Commercialization of Carbon-Based EMI Shielding Fabrics Meeting Defence BSI Standards[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹7,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><strong>MIGARA MED FAB PVT LTD</strong><br><small class="text-muted">S.P. Mary Adharshna</small>[cite: 1]</td>
-                            <td>Activated Carbon Fabric an Advanced Wound Dressing that Achieves Rapid Healing[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹3,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><strong>ESSDI INFOTECH CORP</strong><br><small class="text-muted">L.B. Thiyagarajan</small>[cite: 1]</td>
-                            <td>Automatic Pattern Generation for Textile and Leather Garment Manufacturing using AI[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹3,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><strong>RANGAA MANNAR NUANS</strong><br><small class="text-muted">K. Radha Krishnan</small>[cite: 1]</td>
-                            <td>Eco-Friendly Broad-Spectrum Bacterial Consortium Product for Industrial Waste Water Treatment[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹3,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td><strong>HARSA INDUSTRIES</strong><br><small class="text-muted">N. Krishnamurthy</small>[cite: 1]</td>
-                            <td>A movable mechanical compactor in the spinning machine[cite: 1]</td>
-                            <td><span class="badge bg-info text-dark">₹3,00,000</span><br><small class="text-muted">In progress</small>[cite: 1]</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card card-glass p-4 text-center h-100">
+                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-user-tie"></i></div>
+                        <h4 class="fw-bold h5 text-dark">Sri S. R. Govindasamy</h4>
+                        <p class="text-muted small mb-2">Chairman</p>
+                        <p class="text-secondary small">Providing valuable institutional guidance and strategic direction for regional industrial growth.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-glass p-4 text-center h-100">
+                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-user-gear"></i></div>
+                        <h4 class="fw-bold h5 text-dark">Sri S. Senthilkumar</h4>
+                        <p class="text-muted small mb-2">R&D Committee Chairman</p>
+                        <p class="text-secondary small">Spearheading research committees and technology deployment frameworks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-glass p-4 text-center h-100">
+                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-users-gear"></i></div>
+                        <h4 class="fw-bold h5 text-dark">Mr. S. Arulselvan & Team</h4>
+                        <p class="text-muted small mb-2">CARE Division Lead</p>
+                        <p class="text-secondary small">Successfully executing collaborative R&D projects and technical training programs for FY 2025–2026.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 text-center">
+    <footer class="py-4 text-center">
         <div class="container">
-            <p class="mb-0 small">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved[cite: 1].</p>
+            <p class="mb-0 small text-white opacity-75">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

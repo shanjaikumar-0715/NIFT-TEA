@@ -12,26 +12,138 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         html { scroll-behavior: smooth; }
-        .clickable-card { cursor: pointer; transition: all 0.3s ease; }
-        .clickable-card:hover { transform: translateY(-5px); border-color: #d4af37 !important; box-shadow: 0 10px 20px rgba(11, 34, 64, 0.15); }
-        .detail-section { scroll-margin-top: 100px; background: #ffffff; border-left: 5px solid #0b2240; transition: all 0.4s ease-in-out; }
-        .hero-section { background: linear-gradient(135deg, #0b2240 0%, #1a365d 100%); color: white; padding: 100px 0 80px 0; }
-        .badge-custom { background-color: #d4af37; color: #0b2240; font-weight: 600; }
-        .btn-primary-custom { background-color: #d4af37; border-color: #d4af37; color: #0b2240; font-weight: 600; }
-        .btn-primary-custom:hover { background-color: #c19b2e; border-color: #c19b2e; color: #0b2240; }
-        .feature-img { width: 100%; height: 350px; object-fit: cover; border-radius: 12px; }
+        
+        /* Orange & Light Sandal / Cream Theme Palette */
+        :root {
+            --primary-orange: #ff6600;
+            --primary-orange-hover: #e55c00;
+            --light-sandal: #fdfbf7;
+            --light-sandal-alt: #f4efdb;
+            --text-dark: #1a1a1a;
+            --border-sandal: #e6dfcc;
+        }
+
+        body {
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
+        .navbar {
+            background-color: var(--light-sandal) !important;
+            border-bottom: 1px solid var(--border-sandal);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        /* Hero Section: Warm Orange Gradient with 100% White Text */
+        .hero-section {
+            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 130px 0 90px 0;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .badge-custom {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-orange-hover);
+            border-color: var(--primary-orange-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .btn-outline-custom:hover {
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+
+        /* Cards & Sections with Sandal Background */
+        .clickable-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-sandal);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .clickable-card:hover {
+            border-color: var(--primary-orange) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255, 102, 0, 0.12);
+        }
+
+        .detail-section {
+            scroll-margin-top: 100px;
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            border-left: 5px solid var(--primary-orange);
+            border-bottom: 1px solid var(--border-sandal);
+            padding: 80px 0;
+        }
+
+        .detail-section.bg-alt {
+            background-color: var(--light-sandal-alt);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-sandal);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            border-top: 3px solid var(--primary-orange);
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b2240;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <i class="fa-solid fa-graduation-cap text-warning fs-3 me-2"></i>
-                <span>NIFT-TEA <small class="d-block text-light opacity-75" style="font-size: 0.65rem;">CARE DIVISION</small></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -40,7 +152,7 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-3" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -48,68 +160,67 @@
 
     <!-- Hero Section -->
     <header class="hero-section mt-5">
-        <div class="container py-5">
+        <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <span class="badge badge-custom mb-3">Centre for Apparel Research and Education</span>
-                    <h1 class="display-5 fw-bold mb-3">NIFT-TEA CARE Division</h1>
+                    <h1 class="display-5 fw-bold mb-3 text-white">NIFT-TEA CARE Division</h1>
                     <p class="lead text-light opacity-87 mb-4">Strengthening the research capacity of Tirupur apparel, textile, and rural industries through active R&D, advanced training, and technological support for MSMEs.</p>
                     <a href="services.html" class="btn btn-primary-custom me-2 px-4 py-2"><i class="fa-solid fa-arrow-right me-2"></i>Explore Activities</a>
-                    <a href="about.html" class="btn btn-outline-light px-4 py-2">Leadership</a>
+                    <a href="about.html" class="btn btn-outline-custom px-4 py-2">Leadership</a>
                 </div>
                 <div class="col-lg-5 mt-4 mt-lg-0 text-center">
-                    <!-- TODO: Replace with your custom hero image: assets/images/hero-img.jpg -->
-                    <img src="data:image/webp;base64,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" alt="NIFT-TEA CARE Facility" class="img-fluid rounded-3 shadow-lg border border-secondary feature-img" loading="lazy" onerror="this.src='https://picsum.photos/800/600?text=Hero+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.ShspgBh5gnn9G1ziDr20twHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="NIFT-TEA CARE Division Training Session" class="img-fluid feature-img shadow-lg" loading="lazy">
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Core Focus Areas (4 Clickable Cards) -->
-    <section class="py-5 bg-light">
+    <section class="py-5" style="background-color: var(--light-sandal);">
         <div class="container py-4">
             <div class="text-center">
-                <h2 class="fw-bold mb-3" style="color: #0b2240;">Core Focus Areas</h2>
+                <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Core Focus Areas</h2>
                 <p class="text-muted mb-5">Advancing technology and training in the Tirupur apparel ecosystem. Click any card to explore below.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <a href="#rd-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
-                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-microscope"></i></div>
-                            <h4 class="h5 fw-bold text-dark">R&D Support</h4>
-                            <p class="text-muted small">New product & process research and development for industries.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                            <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-microscope"></i></div>
+                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">R&D Support</h4>
+                            <p class="text-secondary small">New product & process research and development for industries.</p>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#ind-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
-                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-industry"></i></div>
-                            <h4 class="h5 fw-bold text-dark">Industrialization</h4>
-                            <p class="text-muted small">Industrializing innovative new products and manufacturing methods.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                            <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-industry"></i></div>
+                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Industrialization</h4>
+                            <p class="text-secondary small">Industrializing innovative new products and manufacturing methods.</p>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#diss-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
-                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-network-wired"></i></div>
-                            <h4 class="h5 fw-bold text-dark">Dissemination</h4>
-                            <p class="text-muted small">Effective dissemination of emerging technologies to MSMEs.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                            <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-network-wired"></i></div>
+                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Dissemination</h4>
+                            <p class="text-secondary small">Effective dissemination of emerging technologies to MSMEs.</p>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="#train-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
-                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-chalkboard-user"></i></div>
-                            <h4 class="h5 fw-bold text-dark">Upgradation Training</h4>
-                            <p class="text-muted small">Specialized technology upgradation training programs.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        <div class="card p-4 h-100 text-center clickable-card shadow-sm">
+                            <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <h4 class="h5 fw-bold" style="color: var(--text-dark);">Upgradation Training</h4>
+                            <p class="text-secondary small">Specialized technology upgradation training programs.</p>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
@@ -120,94 +231,90 @@
     <!-- ELABORATED CONTENT SECTIONS -->
     
     <!-- Core Focus Area 01: R&D -->
-    <section id="rd-detail" class="py-5 detail-section my-4">
+    <section id="rd-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <span class="badge badge-custom mb-2">Core Focus Area 01</span>
-                    <h2 class="fw-bold mb-3">Research & Development (R&D) Support</h2>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Research & Development (R&D) Support</h2>
                     <p class="text-secondary">The CARE division focuses intensely on Research & Development concerning new apparel products, advanced manufacturing processes, and sustainable technologies to uplift Tirupur industries.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Development of automated prototypes like the Upgraded Mat Loom funded by DST.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Research on technical textiles including PBI-blended firefighter suits and carbon-based EMI shielding fabrics.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Development of automated prototypes like the Upgraded Mat Loom funded by DST.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Research on technical textiles including PBI-blended firefighter suits and carbon-based EMI shielding fabrics.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Replace with your custom image: assets/images/rd-lab.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.1nNzufnS9JZZsZBvpQs0IgHaEY?w=272&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="R&D Laboratory" class="img-fluid rounded-4 shadow-lg border feature-img" loading="lazy" onerror="this.src='https://picsum.photos/800/600?text=RD+Lab+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.1nNzufnS9JZZsZBvpQs0IgHaEY?w=272&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="R&D Laboratory" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Focus Area 02: Industrialization -->
-    <section id="ind-detail" class="py-5 detail-section my-4 bg-light">
+    <section id="ind-detail" class="detail-section bg-alt">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <span class="badge badge-custom mb-2">Core Focus Area 02</span>
-                    <h2 class="fw-bold mb-3">Industrialization of New Products & Processes</h2>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Industrialization of New Products & Processes</h2>
                     <p class="text-secondary">Transitioning laboratory innovations and prototypes into scalable, commercial industrial products for Tirupur MSMEs and rural weaving clusters.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Field deployment of upgraded automated looms for Chennimalai bedsheet weavers.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Commercialization support under schemes like EDII-TN Innovation Voucher Scheme (IVP).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Scaling sustainable dyeing processes, activated carbon wound dressings, and AI pattern generation.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Field deployment of upgraded automated looms for Chennimalai bedsheet weavers.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Commercialization support under schemes like EDII-TN Innovation Voucher Scheme (IVP).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Scaling sustainable dyeing processes, activated carbon wound dressings, and AI pattern generation.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Replace with your custom image: assets/images/industrial-unit.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.VsdV88TBJ5KJ5IVLHYQXBQHaEQ?w=319&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Industrial Textile Unit" class="img-fluid rounded-4 shadow-lg border feature-img" loading="lazy" onerror="this.src='https://picsum.photos/800/600?text=Industrial+Unit+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.VsdV88TBJ5KJ5IVLHYQXBQHaEQ?w=319&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Industrial Textile Unit" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Focus Area 03: Dissemination -->
-    <section id="diss-detail" class="py-5 detail-section my-4">
+    <section id="diss-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <span class="badge badge-custom mb-2">Core Focus Area 03</span>
-                    <h2 class="fw-bold mb-3">Dissemination of New Technologies</h2>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Dissemination of New Technologies</h2>
                     <p class="text-secondary">Spreading awareness, transferring technical knowledge, and promoting modern technological standards to grassroots manufacturers and apparel clusters.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Organizing awareness programs, Khadi product exhibition-cum-sales stalls with KVIC.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Conducting student drawing competitions and promoting traditional handloom awareness.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Organizing awareness programs, Khadi product exhibition-cum-sales stalls with KVIC.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Conducting student drawing competitions and promoting traditional handloom awareness.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Replace with your custom image: assets/images/dissemination.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.Lba3zWiQe91x6jDVg3Pe4QHaD4?w=316&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Technology Dissemination" class="img-fluid rounded-4 shadow-lg border feature-img" loading="lazy" onerror="this.src='https://picsum.photos/800/600?text=Dissemination+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.Lba3zWiQe91x6jDVg3Pe4QHaD4?w=316&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Technology Dissemination" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Focus Area 04: Training -->
-    <section id="train-detail" class="py-5 detail-section my-4 bg-light">
+    <section id="train-detail" class="detail-section bg-alt">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <span class="badge badge-custom mb-2">Core Focus Area 04</span>
-                    <h2 class="fw-bold mb-3">Technology Upgradation Training</h2>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Technology Upgradation Training</h2>
                     <p class="text-secondary">Equipping industrial technicians, weavers, and self-help group (SHG) members with advanced hands-on operational and technical competencies.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> NABSKILL 30-day training for Wastewater Treatment Plant Technicians across textile units.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Residential CRP Coat Manufacturing Training for SHG members across Tamil Nadu.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> NABSKILL 30-day training for Wastewater Treatment Plant Technicians across textile units.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Residential CRP Coat Manufacturing Training for SHG members across Tamil Nadu.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Replace with your custom image: assets/images/training.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.ShspgBh5gnn9G1ziDr20twHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Upgradation Training" class="img-fluid rounded-4 shadow-lg border feature-img" loading="lazy" onerror="this.src='https://picsum.photos/800/600?text=Training+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.ShspgBh5gnn9G1ziDr20twHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Upgradation Training" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 text-center">
+    <footer class="py-4 text-center">
         <div class="container">
-            <p class="mb-0 small">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved.</p>
+            <p class="mb-0 small text-white opacity-75">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved.</p>
         </div>
     </footer>
 

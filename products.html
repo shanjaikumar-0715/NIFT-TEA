@@ -12,21 +12,125 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         html { scroll-behavior: smooth; }
-        .clickable-card { cursor: pointer; transition: all 0.3s ease; }
-        .clickable-card:hover { transform: translateY(-5px); border-color: #d4af37 !important; box-shadow: 0 10px 20px rgba(11, 34, 64, 0.15); }
-        .detail-section { scroll-margin-top: 100px; background: #ffffff; border-left: 5px solid #0b2240; transition: all 0.4s ease-in-out; }
+        
+        /* Orange & Light Sandal / Cream Theme Palette */
+        :root {
+            --primary-orange: #ff6600;
+            --primary-orange-hover: #e55c00;
+            --light-sandal: #fdfbf7;
+            --light-sandal-alt: #f4efdb;
+            --text-dark: #1a1a1a;
+            --border-sandal: #e6dfcc;
+        }
+
+        body {
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
+        .navbar {
+            background-color: var(--light-sandal) !important;
+            border-bottom: 1px solid var(--border-sandal);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        /* Page Header: Warm Orange Gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 130px 0 90px 0;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .badge-custom {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-orange-hover);
+            border-color: var(--primary-orange-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Clickable Cards with Sandal Background */
+        .clickable-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-sandal);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+        }
+        .clickable-card:hover {
+            border-color: var(--primary-orange) !important;
+            transform: translateY(-5px);
+        }
+
+        .detail-section {
+            scroll-margin-top: 100px;
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            border-left: 5px solid var(--primary-orange);
+            border-bottom: 1px solid var(--border-sandal);
+            padding: 80px 0;
+        }
+
+        .detail-section.bg-alt {
+            background-color: var(--light-sandal-alt);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-sandal);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            border-top: 3px solid var(--primary-orange);
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b2240;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <i class="fa-solid fa-lightbulb text-warning fs-3 me-2"></i>
-                <span>AIC NIFT-TEA <small class="d-block text-light opacity-75" style="font-size: 0.65rem;">INCUBATION CENTRE</small></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -35,92 +139,92 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link active" href="products.html">Innovations</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-warning btn-sm fw-bold text-dark" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="hero-section text-center py-5 mt-5" style="background: linear-gradient(135deg, #0b2240 0%, #1a365d 100%); color: white;">
+    <header class="hero-section text-center">
         <div class="container py-4">
-            <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-bold">Prototype & Innovations Showcase</span>
-            <h1 class="display-4 fw-bold mb-3">Our Innovations & Technologies</h1>
+            <span class="badge badge-custom mb-3 px-3 py-2">Prototype & Innovations Showcase</span>
+            <h1 class="display-4 fw-bold mb-3 text-white">Our Innovations & Technologies</h1>
             <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Pioneering research solutions, advanced technical textiles, and upgraded machinery developed at AIC NIFT-TEA. Click any card to explore full documentation below.</p>
         </div>
     </header>
 
     <!-- Featured Innovations Cards Grid -->
-    <section class="py-5 bg-white">
+    <section class="py-5" style="background-color: var(--light-sandal);">
         <div class="container py-4">
             <div class="text-center mb-5">
-                <h2 class="fw-bold" style="color: #0b2240;">Featured Innovations & Projects</h2>
+                <h2 class="fw-bold" style="color: var(--text-dark);">Featured Innovations & Projects</h2>
                 <p class="text-muted">Complete technical breakthroughs from our research documentation.</p>
             </div>
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#matloom-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-primary mb-2 align-self-start">DST Project</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">DST Project</span>
                             <h3 class="h5 fw-bold text-dark">Upgraded Mat Loom</h3>
                             <p class="text-secondary small">Developed for rural women development under a ₹56 lakh sanctioned grant.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <!-- Card 2 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#firesuit-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-success mb-2 align-self-start">MSME Hackathon</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">MSME Hackathon</span>
                             <h3 class="h5 fw-bold text-dark">PBI-Blended Firefighter Suit</h3>
                             <p class="text-secondary small">High-performance safety apparel with PBI/Para-aramid outer shell offering thermal protection.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#nabardloom-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-warning text-dark mb-2 align-self-start">NABARD DPR</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">NABARD DPR</span>
                             <h3 class="h5 fw-bold text-dark">Upgraded Power Loom</h3>
                             <p class="text-secondary small">For Chennimalai bedsheet weavers with electronic tuck-in, let-off, and take-off systems.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <!-- Card 4 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#msme4-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-info text-dark mb-2 align-self-start">MSME Hackathon 4.0</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">MSME Hackathon 4.0</span>
                             <h3 class="h5 fw-bold text-dark">Advanced Industrial Protective Gear</h3>
                             <p class="text-secondary small">Ongoing research project currently at ~50% completion stage.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <!-- Card 5 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#edii-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-secondary mb-2 align-self-start">EDII-TN IVP</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">EDII-TN IVP</span>
                             <h3 class="h5 fw-bold text-dark">Technical Textile & Carbon Innovations</h3>
                             <p class="text-secondary small">EMI shielding fabrics, wound dressings, and AI pattern generation projects.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
                 <!-- Card 6 -->
                 <div class="col-md-6 col-lg-4">
                     <a href="#eco-detail" class="text-decoration-none">
-                        <div class="card p-4 h-100 clickable-card border-0 shadow-sm">
-                            <span class="badge bg-dark mb-2 align-self-start">Sustainable R&D</span>
+                        <div class="card p-4 h-100 clickable-card border-0">
+                            <span class="badge badge-custom mb-2 align-self-start">Sustainable R&D</span>
                             <h3 class="h5 fw-bold text-dark">Eco-Friendly Dyeing & Waste Treatment</h3>
                             <p class="text-secondary small">Sustainable dyeing auxiliaries and bacterial consortium for industrial wastewater.</p>
-                            <span class="text-primary small fw-bold mt-auto pt-2">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                            <span class="small fw-bold mt-auto pt-2" style="color: var(--primary-orange);">Explore Details <i class="fa-solid fa-arrow-down ms-1"></i></span>
                         </div>
                     </a>
                 </div>
@@ -128,143 +232,139 @@
         </div>
     </section>
 
-    <!-- ELABORATED SECTIONS WITH COMPLETE DOCUMENT DATA & IMAGE PLACEHOLDERS -->
+    <!-- ELABORATED SECTIONS WITH COMPLETE DOCUMENT DATA -->
 
     <!-- 1. Upgraded Mat Loom -->
-    <section id="matloom-detail" class="py-5 detail-section my-4">
+    <section id="matloom-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-primary mb-2">DST Scheme</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">Upgraded Mat Loom for Rural Women Development</h2>
+                    <span class="badge badge-custom mb-2">DST Scheme</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Upgraded Mat Loom for Rural Women Development</h2>
                     <p class="text-secondary">Sanctioned in September 2024 with a total budget of ₹56 lakh across a 3-year period. The project covers Research & Development and field implementation milestones.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Initial prototype successfully completed and installed at AIC NIFT-TEA research centre.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Further manufacturing work for 5 additional looms is actively in progress.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Initial prototype successfully completed and installed at AIC NIFT-TEA research centre.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Further manufacturing work for 5 additional looms is actively in progress.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image here. Example: assets/images/mat-loom.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.4ZfxtjH7FmsfaqRB1_UVZgHaGa?w=213&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Upgraded Mat Loom" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Mat+Loom+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.4ZfxtjH7FmsfaqRB1_UVZgHaGa?w=213&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Upgraded Mat Loom" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 2. PBI Firefighter Suit -->
-    <section id="firesuit-detail" class="py-5 bg-white detail-section my-4">
+    <section id="firesuit-detail" class="detail-section bg-alt">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-success mb-2">MSME Idea Hackathon 5.0</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">High Performance Firefighter Suit</h2>
+                    <span class="badge badge-custom mb-2">MSME Idea Hackathon 5.0</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">High Performance Firefighter Suit</h2>
                     <p class="text-secondary">Sanctioned ₹12.75 lakh support. The innovation features a PBI/Para-aramid blended fabric offering superior thermal protection, flame resistance, and durability meeting international standards.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Reaffirms regional innovation potential and commitment to safety solutions.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Reaffirms regional innovation potential and commitment to safety solutions.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image here. Example: assets/images/firefighter-suit.jpg -->
-                    <img src="https://th.bing.com/th/id/OIP.ycXD-3kynLA3QLgVlUV8QAHaHa?w=186&h=186&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="High Performance Firefighter Suit" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Firefighter+Suit+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.ycXD-3kynLA3QLgVlUV8QAHaHa?w=186&h=186&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="High Performance Firefighter Suit" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. NABARD Upgraded Power Loom -->
-    <section id="nabardloom-detail" class="py-5 detail-section my-4">
+    <section id="nabardloom-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-warning text-dark mb-2">NABARD DPR Project</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">Upgraded Power Loom for Bedsheet Weavers</h2>
+                    <span class="badge badge-custom mb-2">NABARD DPR Project</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Upgraded Power Loom for Bedsheet Weavers</h2>
                     <p class="text-secondary">Improving the livelihood level of Chennimalai power loom bedsheet weavers by upgrading conventional looms with electronic tuck-in, let-off, and take-off mechanisms.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Prototype upgraded loom successfully developed, tested, and used for bedsheet production.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Hands-on training provided to 18 weavers; currently in the field deployment phase.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Prototype upgraded loom successfully developed, tested, and used for bedsheet production.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Hands-on training provided to 18 weavers; currently in the field deployment phase.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image here. Example: assets/images/power-loom.jpg -->
-                    <img src="https://image.made-in-china.com/202f0j00WJKQzVYPbjgB/Improved-Heavy-Bed-Sheet-Textile-Weaving-Double-Nozzle-Water-Jet-Loom.webp" alt="Upgraded Power Loom" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Power+Loom+Image+Here'">
+                    <img src="https://image.made-in-china.com/202f0j00WJKQzVYPbjgB/Improved-Heavy-Bed-Sheet-Textile-Weaving-Double-Nozzle-Water-Jet-Loom.webp" alt="Upgraded Power Loom" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 4. MSME 4.0 Project -->
-    <section id="msme4-detail" class="py-5 bg-white detail-section my-4">
+    <section id="msme4-detail" class="detail-section bg-alt">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-info text-dark mb-2">MSME Idea Hackathon 4.0</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">Advanced Industrial Protective Apparel</h2>
+                    <span class="badge badge-custom mb-2">MSME Idea Hackathon 4.0</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Advanced Industrial Protective Apparel</h2>
                     <p class="text-secondary">Building upon previous hackathon successes, this research project is currently ~50% completed. It focuses on specialized protective gear and high-durability fabrics for industrial workforces.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Focuses on advanced composite material integration.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Rigorous thermal and tensile strength testing under progress.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Focuses on advanced composite material integration.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> Rigorous thermal and tensile strength testing under progress.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image here. Example: assets/images/protective-gear.jpg -->
-                    <img src="data:image/webp;base64,UklGRhQgAABXRUJQVlA4IAggAAAwdACdASq4AOoAPp0+mkiloyKhL1L+GLATiWgAzq503d5vflfzA9sK3P438ccn3VvmTcw/oL2j/6f/Rf3T+yfDf9N+wJ/Wf71+vfXF/bn1Af0b/M/uB7tf+y/cX3Pf1f/aewB/ePS8/53slf4L/s+yF+33pv/un8N397/7fpuapp6N/tHou8iP1niH5n/ePuZzDIl/zn8dfu/Xh/f+BP7b/KegL7e/2u+QzleoX3h8xH7z/n+iH129gD+cf0v/eevH/B8Y77Z/vvYF/jn9m/6X+T/K36iv8H9sv856xfqz/2e4x+vnWq/bv//+69+tq22lJ3eCJkuFrqvi9iUWMsQ++7XcxUc5YF6Ph66W2lb755BhyAhdcYuYs10tVFVyTM5A+Gycggku2ainX/pikm7kY/Z0TcaJMgbx583cEw4hsRp6BjLe3nYDE/Ajuuxc9R9sjyh0f+684rjAwE+tfBTJZ9Tl3l3saxeamJ5WVfQcn7xd/xuiQmsJ0Gs7krT82+QgUOhPUZAwJnreslDoNYlZjkotDIf3s/to8yLHpQpF5SRlnGcxPe+UoRK6U5VpYT92aojoqVLH8sy0pyJgDCMeqyplfzlFkT5sUmNnvuGpZ076iir8uTomtBnNaZvq2Q9klHkt42Um0fwo6uuQe5BLlbvjwQXDUv1wzWsHk4ZKLLW/WJ2febaianQEgCE/p8JFZCNQOjI6vmGNWRRf41Q+GisbTeLaHa1u6yNvHyDsREtg7i8S2W+e6bCdQrCxA7+oGzxhiXz3fqwfk3Lmj1koKMhxs+/a/NNubPpE+Zg0kxyPiP+NKGS4h6HXxLENYyScgU4MgSAvgTtZOZXqSbAhLrM/GSgsnsdKvIZFh8qYJ5+F8BkTxD+dmC0jnERZrPtQWk9JV155CDP9JXzsF88BQ+vLh5kQXIPKbBLhwXMhhErgHlLhxMB5xtbbGH9iaD3BjtGr9KVd353LAElTFayga48hJ+z5YSwBICOwxVURfgeddZMB2G/p9fmp5U1TTCf0yoEGtBbJARfIBH4qa3EssODK0vknYnQHFBxpTLVQfQ3FZyz7C/wIBqw1lTtpp848xtLFDMscKELIaQLYnuJXdDSEuRgubCPRn17mX/V68FLWai4inzOWwfU+hhYt0JWySQovj4QhAZWpGQQeKKGTuyF5Ov+UccAZ3lJbOmY3j8zKtSD+XnyFqtd3vQ1G36F/1XCxtBdTXNQjnNVzcnGxhpQUfKAqdvDAoAD++4IAAAAAKQ5t0iuHwam0X8QxDOysSKrkzwQpnQ89RK40aLqcHrdyJ3/YkD9Bs40ie3pad2fl3mX5VgbDVwg3C60R+qthTzZt/rkDgDfIQeMLdKev7WqD7qXHBz0rSErmMkyYgu0xx2OJPwYsvU7LTj/sGIaBB6jYEQVHkc++JK5/IcFQunlzZ3Wrn4CiBx8A8gQFseuY48PioGLYc/CWoQOX8e/9gL+UDKg2iUzWYGmfdXFuajq0IAhmJv/2a2Yi85I0FJe5zGg/Yzd8134MhQpFqjReIH9pSTzkIe4vt2044j1dKHolsm/jf+TNW/IHMMUpvM5194UyY4t4FH8y6MCrBmAEHAvOsAsswy3kUa9HYilatsPjZsX/6F38WbUfgjzkQjgXbPR400sEZf7VDO3GMSBuBh//5orYhVqRTY2kYNLcrhkhcVO+p+FfLV0SyfGDCaBWyDbcFqQsBZHA/wsLAh6/i7gdZHkQcyCTXBDYMnuMtvu7ljBamKqDbh+Q+LORHPN2j3yrst26zqf/29fPsj4a5kIH5TyavFIT59k/vWe3A/nb8XbgfVKWAdpr2FrYS7o5wIoVVBq9MOCMN2fI3aKXalr3NIKw5ZtuveJB7gZFa+SjRf53zlZcSYHJ7loX7hNB7vvRCs4roA1bK3Bsutd/ipWyFQe6V0rkaRPZYnOxSuF2oF37lfz0kPUsJodU65sfjWUK5ORshVIhgxvrMEI7UvuB9aV8IKvMhAqKp2yszwbx/40h8DzUDcljeTMTIEN3erRhsUOVB8kauqR54DckedjnY8XYcXqq322/9WU+rgehYo4tE3U+GbK2ZNes24ZtpnRZYxYUy435sItvTTu59rJ7/RPVNpbHcVO80O8DZBjHxWjA7+Vim3FwOq0OxzSj2NtDBhPCXedkhhqc2W+1A6IRYpd9L8CppNyiispbW2OxvTcO/w2b3ecQAMn6Vmmye4XOzkQ7V3rOhhByEE4AHWK1QonRSy3upyUm0tYpf5D1S2Cblw9Gt7r6a1Cujmgna3ItNdp9G74Z0JS0N7zKH2jAaUnVRHRs/rV3M0jUIGGjC2PbbQabX2kl/j7EYXE9xytUxCtYCyhElN/ldJQDriBlWgXcmLnBrScNvgmCFwRgXeAJmgQKuslMnUoD2xOB3dg8JCa66BXt/Ms3neJ1xx+1HZ9QWu9WfGLYUn35d4qKaCjRnwbhd0+bSQKTpkxYW/EzX+AAbsde0PNHxbTx20mDoWEb1H1q0jf+fSIo8Qex43P1b2B7qy67syhyc/VTNofKpov03/FEVbMBPPI87JgP9k3jMJx0mgLw5Q37hkoOvyARN+DzXb9lRS2NgOLv4aoMEoBwkQbj5Eh18zUNWHnF6+eJMhZqgVodsfdbmy7Wrw9ez9O1r/WP6tyIkQoiHPNJI4f1G2pfiPtG3yolDM9RHMHID2moR+ZTnrPOAoTR8K7DgCFXvGuvNML2ys46bhvUlSStKOZxFyuZ5f377ndw6vFra12h9djT1mCFreVLlVd/lSxoJ5xQMtdVoMTH9ZJTmJQPzsor6UFpQO5sFQt6FfoW/OQJs7290VOfGmnCQphY+XFnBM0CwH/QwOhaBh2H5oVlkmrk5Q9f8fAv39ezU4GSQYHPgqtpXFLs8FwpwZ7AL3gLVrguyZhalwTAhUMrINkH1bKzQ4QeeHdFohGoG0+iB/TJd1xJ9xmantNgGi0XKBCXO9+i7mv4jleQScEK6n/O7tAr18umYGssVRODu8pC5AS43qHCu+2+TPt8RASL/5oYlVWosIdzZHdeWjWUnDQw5LXN5dJN8M+OKJtFwAy+YdvUWu5I1wMGC1QuyKovLR5Sh4xzFQcsO0Zb2dAbRYquPSXUaU273y6Wsl+IJ9y7Ubthqnb2I8rI+/91CmNn/kv2fta8ESM6ME/8PtpDoekUTJO+1jrOL4H0OtQVoh5E7N1gHKJSuAIRHHRe+4LOLXv/uEiFAv4VJVQVKhbUT+th5dpxZhmjSQf5au/bMNV2janLBmu9sj40+KpBDnR7QjYmu+cG+JfDJmSlTo8tG9bZTCHfGCwErY9bL1BjwSwbYUegbanCdyGHDMv4myy2QSqczljU7D7l7v1jqoF3+E0cHHJw/SIy8Pad8MNPD5KeeCHj14faXNdoTRfF50+jDo7tkoAd96d/ht6ldAuDXN9uO2I/kOsbbAKC8Kmz09pwNgsi2e3uO9aJdE73AIPJTS5DH45tQ4zEjxRLBvmSmHhN1erz6NrOkTQsRDB4uet4fEpQkVLp4JUa9Z+czaZwF6HFaCUye4157kZeB9KZWwBYR9cW6XICsunZgHqoVNXyr1UEeVn/gk63SOb5ELTuiT/bl/rbtaoeu9hBdIPHYByBu0gN6BrZW7YH1Px6DwFPFE2OThkGI3R9xSOutjD5XHIfxNGxN/i4a/KcfOOn82tXEgfO9Sqc+NA13KxAVoFcUkOhjmuCTTt61zUBSyXKnAlBwibaNWwH8tYljrt5Ljwz0vbh+j8CJcWJD/kL34LAQvYekctxrFbBG63aEdk8TFmA+WZ6ss90pW4uP2QfgPvWme6SkrNzuQHnH/n+F8ldfLdhaUOfT/kinI4rGaAbAgO2X7TOW3YU6EDt6hVzgG+pK0/KVIbjQ6ZkU2OMF87k7SgXXamCMNsdgasG5A6hgy4rua6Yw9WDEOA2CIElcA5CnocXp8iWZw4rw+EkvsEi0turcD+/g6ebd2jXONiCYNoXnY7taBt0WnkQu9l0Bls5QkYTej2nFKAsyrRKO5sne4cKEDtK2z4EBYlhRqKDXH5Y8ynX0UYLBtcdQZrd9+KX2qkJjGJefKJRVfNTIYn+Wn6Cenv2fwSIpeaeAVopTwjxzpYSIb1uNsVabOfS9zjIjvBp3BRDzYAM75TKyAg/3YjmrxEh1ltJu2mIdi4IC8XHZY23wI7qxFR+fypVNxg4Mq3M/dTqUkr57RZMdRdn+4OB4Jv1FwjZPShCKUJEPKxWDAtiD8XPKSBoN7hixQMOPArGi228zU6+Bn6e0lqYUXA5Q3z9HMHTRfuYTUI2rERnqqe/TL5fxGAYpSv+w/WYKFZ2Q4dk+8Mn57Q9h67IMVxkIE5S1Phsz1hEXMaEw+EHgODWKzTqhzknAFrKjNXW2VpI5SmLjqzzxiK8q3xobRsMGovW7Zy76VdR5P5jHJ1k9xGrMDwU3hZnbMeU/ior135HqwaY091O6eM7NSq0BwmoLWNwVJnq8UNw12jWFWeSE3HwqR2toNTf99KA0Ou4uOQUikUzODopAmpPTJnyWM0g2cn+KMjBgPk0i+Vb0e51bqGdQxIw+X12SnCraCbH7LL/eh/XbUFKAXT75sLyYXbVjXI+OS2eYD3FhdZZX0JPUEfuWj7RDMGUjsIHtKyFcdReJ6r3ZTQgYJdMwecKAuCP6y088+jT1ARGP69X1Ik+y/YVI1VllVRtILxaNQjmQyhVolWnCds0p1R9hirFyHqk+zbM0L3B4eL21rodWp3Z17sEni5Gcgq/DmzurhF8YT2WGhXfCzCafZVNFvzZyVKcZXZ2iS/D8k1s2skGl9pmP+PI+Dazhj5hlIGXM8L4g1B2OCvbVk3ZNqfd8RxgVg/cuxC9MM3tQ3/rmZQ8msC5F0CczeHqT6myfRYc0k8lIqzTQmt66cTmDJ0T0v4OCioPCVOPu8eYPdcRiz+7DbqkrLnGf4evDne48CXVe/Ch8m1GPGw/AY+aOPgaUjZlldDaecnGi25YnIS5lFWJZjJEXOBjPuiXk2OhRQM+xZPhpdmuLnCMuU8fKx2SfrlQNvnih+jd99v8Z7qL9s3toNv9uVOerWg0yNzcy+ZS2yFu/5+toos0EZBGkbqjvJVghHUaovbEqhYl9qyf9Hq7+ACKwBgGQatk02imiHW3F8Q2xaapONRDjpacKjKZonIioR3oMQf2ugy5xBsz/0THaWy2SlP6do3ZzAyDABt8Uoz2Z2Shazhzn9P/Ltt/AvzDRTRHT83vbra9IuL8s++9g7RSb4/bs772nUpQBKRpAkbOHWSV9ouHTJ3kg5DQwWdsyTncn/l2LqG2tw29d3F1EELwEHezsfoBIZ7+IMuDYGfyNemkywn80Cg2IjwrtfwzSrA74Jq2S+BhtWbVIN0If8BOeBvKZlIY3ZOzDZmfVIyVJ3nafCrp3XMhTHtouLSyhhh9mc4pxTovuP5y8iQ1IZewejGS/55fSJxM3uECOtrSAwll8f8P+vBI+IGHvfMe6OU1jkWGKwkLhYiz/maV/BM7+T44nv1QygMOu9mrqYBC2DBDfuDsGoylnOZETjtKhcf4bkOWz1TOCrvsPS55VZSxaLwGes+8oSEedUmKW+5O+EwIwvr3sdcKVu4lpeqc/rW2bCULsia4WRgebLVvuGILz9FD649JjEKaGCJdZJnSJKQGsLrdp4mWO4fNBsKWRB0LO7qHudPBJ5t0TK/Bf3fTl+U1fjBuUzZLr9Wzv57C/ZeW8vOl+QeOi8u5WR0KeSnaUrkjBvucRTdS9jv/6jSdMreHK3Y1rhCTsXjh97M5FNTNKDPmynsXBE378pdRFp/+3EjO8DFJghBWQ4sQzfdxPSzbLVjWZ1K5nkOL9AZbhzktLAXZ8EwsLloAnAJx63cRgOE3T0VYUPQXYHSqPZH0fsQGDrXwxHuGMXxr3gV1u/KhgZ0RMSu66CPsNhivWG8sv8m6dxKWXJk91pUqoDCNWzKXwWKF93Kc25YxWu+n7IH/wvWr+yJk980R8mx4dnM7M5WvLBihcFUPM/L7HwUKME6GIQUAgAITM/KBfWiqTzAUsS7zpqZFY8aw3Su3Pk/e65+/ozsxewi30jduEkReHRy9Yc2KZckQrXRU/u3XV8CDs4dq/ELvnk3RcJw/cPNC5OeoMDmZ2W2LM7qqEliJXPtKhH65vr+6GtZxj0NXMCYyhVNOicfJX0ajQsUu1KKObjg0RJG+renSi6h4/Kg0PshRJWtzhRmyiPX1JnO7GkMJdxJKDqFlUIX+q/c+Fg1DUksXwHxRSeWIhMYvH1PfPJ/5WW7X3V5eDh50NoroHVt0LMTQoxBPJnbcVt1FlkCrdV0rbXxSBDBXqvZKTlJYwbYhRag8VOkEJnZlLDn+rux8V9LoDI8l9Q/qQ8NaS9ckkjJdsSgC+EUdsAD1wveC8MhOJOejV1SFvbfwgnzIr8gPAq0rzwc0nQums1406iPFq+f23wAGtRg4wgUPldK2JgY8sZNbTMWuxO0WoO5j47BfjvkbmQujWo6CxvG+gBTHPNWtNzyvT1E3NXh6H32h3htAKdzWchmUbtx2+9XQjxqUgpjhz+GiOQxwWQbDaSVag68NtkSh+iy/uZPrlr+L8GTk+IlJiGI7LvUANSSPAf+OZm/qh/u9gfXsIF7js6H4+6X7ympVpvCoq+3YAL/EzHsXjHCqbuqVHVLE5tOjFqIHf/VhjQ8vES4t0r/p3bY7mm4maX8f1dltdga4lYuekWd8rpMewdn0iCGlapiP4wKFqOWcKGCnOv3FlN9M/DLrzjssxGBTJhPBF/H/VcJyBx+A1VIMMB26/gBne9k4w13S/vNJuGqFh+oUcyQ20OmLhjvhAUSRAk2eRGu4zKQnSHh7sNKzrQduPqdt6HmDagK5p9HfVzoGV5TJ9bR5yKdmEyR/8TkjpBfDlXsCRsrGiMZmgkiHbMBST8B+QCoIyIx3/N/LyZZsmuNUc8GbCqYeaQGg+YX1LGvkC1/zdcBv87+pec6sZkgwEEMPXSVCprdErFuxFSoJ7QFvXTh5Dkan8uumFNdsvq//QLe4ltDom3UCrcqijM/ReItp3rhdR/z/czfC7VFN0oNHkghB7siziQAxgH0oLbIWmqLiTDuxmMY1qIWv5IxajMHF1hVGU/JaEdDG+kbCbVhOo0nQEc+qpdhhc78yfIxtQaqID9eoGsvWZz3TDvrx4d1Ho8Ql6zCyGEEABDT7jS90HlEslsjGZSv3XluGA2BJoAIgx1gyh2XQIW7CEZwyYrypolD8PPZC7XEbzFAAKf3cuh407YxS4Mccu5Q4sz2gwHA766ORKxvSJiJ+ZvI8t0Usr75nSnSmkEKMdIMZZNwpCXVa34U5NZhmsiqv1PIMtxC2s4QqIwehIpoR/5dUeelpvicARhOfozreHLPb1FgUUyr4YizeIdt2VXoL1t3MRvbQn9euod3uISzWFE8bZ+CI3Ib0XI73Dve39MDeaxwnzDl+5Evq8d9j/MCzLUvCjoiI6BhuZ5xF+pt2E4Vb7YAzC6kMPo3N1T4gdIUf80JY32rWOVaIFLh3i96chUvZ/LNoy/+T+SHWg/zM4mNpA9Q6MmIYGDuKqieTUk5twWsMsxjn1s4MiXNeEIjDtTl6w376Iz3pXAcGO/gBfSC0AW7SmIwWeHRONOey0KgNswWwkvZJ2AXOxXo2A71B3V9k0Cwj2d+EzkqTixR9h0e+XBPgqCt3/3wLcFYG4g1w8sEF3n2YdPACcY3YByYs/X0UnaGu1ADPDh5W25EAkHvVVAZoMIQEXv/T1JS/KYPnQFl1/ZP0YWSPHlD6GMOLQLNFSHiCU5SxqPG4pLLUoSA8T+2DBMl7NeniGe2DgNCWtThdS8jG2feZMJiJkCFwWUL06Mo1AkwTeBTtdUfwg6nz79wnGtlcq7YVuf2Tkd+p82hJd25rTZexX09A8aypXvHE27N8iabcjy6853QQeiarvhTg0A020mDRddQFeTep9azGmqI5/EcBRQKdP1Gdb0dSj4nlgBLwTYnlZC5k2IMlEx/oXVL0Qj/4fjeFQFLqyLWI6IclVa5iERrPFKLoPXS0GzCkbMnBqSDWGSA0UjNTwGnxaVH0Eb8FJ8ZX21f26yFH5ejRnhb120dqbR+MHQJvUhqnnCEE/hC8Z9RinRZJ5iLq1W3c/Oc8WI8K9CqyPRpuZnX5afABKwJP0tBVLdo3USmDRsInq7P2A7P3t7iDCdIKjpxRb5ib8P/Zg1K0zeaCtMZXjixCcBcluk1WwwUzLubpZp1BzoUxpoD8zKc+iPggCyrcMjAlA/ld9OHxCGnABSq+Fro9SpcEvq3GNLo4KMxAFQ8v5z6nGKU1ebtLWc2BmeOQi6ZfjcsdwHLSjwldP8/1tgD4gHborq1AjTbzg4FkVLct6YyVNIt5fnc8jwT1RalNMp8VAn5ANRUs/rgJBl2JQ6SP6MD0z9DvZcfvtZPL4VuBCsnWC8uMniwkni41CKrGDculiju61Rc2mMulWBXdKj3YOrrFXhwG5hoA3tOWmULOqpO+Vea/IRx7G2W5JTaDHoxAinx8sm9GVhKCO5JSm2lI/mceb+tsz4Xq3NXZe6jQw8UMOh6a5HdRi2nmp31iSGaPGqIodfgtgVBmGK34XNvpDOC7ZELZNxma5S3GpY45Ovx7rrl1toL1/pDZTVgdPOS/xaqWlEMTT9iMG22rfTzjhQyNsFYntpwaYyNoU9K36jP9DBJX5XkIovtnNHoysc1PKtLRrYhspgmdxFRi+eh7uvSI0OgPmtaIwSiEUJmM+R8OE6GvTbDXHTAd74s+jhl/gdcDWVcAfjYbAU2MN3x0irMdCd881+wpZOxnAx5W2NWYlvCvmsXvo+3dbXnCTkiq8T+6p1ncyy0YhAOAncmlikHBT6Gsszo5M456qIbPXMjmAgFcIC4y/tBEEIw/4vHv08x6dYK4neRvtwcTEZJtec/lKsjWMb+WF1tNPR4xndU7WRRdG4eUtJHsswG9X7rURMuEXNhjMZxoTgO1RPS25WTZvCy1GfGf1ZvyEoq6hKk9EPe9ylzg7yF7aIFgNKAcah+Mku0ONPo/X3PPAhNRKnKmxNQxrp2SopL5EprJZmH5+x0VA82cDSTta7SoQIB0ZX5KvTG6K+U28A4tGXOhYhtlEk3yoASs5JhR74xYKoNIfHFRMYYMic5+6TOqnR8slNKywuHmv+1sj/BOaLci02R9WN6RqL7NtlnlzBflIFKeJsKDHiglvE73DNPbWeWtl2f4ho9Cay745raIOeg6xZ+wQc8l9s4T5JAU8cphu/1udEsBVZWt3l1ee5HYhOhJA1QNchiI5Im1q0dHscQ9zppLX+VtC3MZzaOg5QfcO1GQFSvjWw1wWW/m6KeheCy0JATPkYUCUMf/SxnJTPuD1OsPH3CkmWR2zJ3EYdmK0REZqBqZ9SvvLBHdcRKrLzLdcgzaTuo9Lr1tGH1yYDZKiCFVBQXVCTpqHUMmGxsehI64wmeZ95Wbvby1/TXm8DqWAo3h9LDq+H6XOOH5eacnHqq3Mr7HMw6xcOYdaJybxVKqPKlvDWHA8MwgeldYB9ZaKJ2UKeO3j7/ms1AnvPf0oOsLtYdVsmP1IgmBzF2fIw0cmb+2eotvhDVWcyaeUMmZSgudz8Rkjxy3GrqdFhrttbkRWQvtuROWVq3c7xSMD9eSxed1jneqssKcGeztjqCf07U28AD5ICiQCdPbwata8ezXDn1xdma3Q76Jlo8PIGlu3j6gyizFp+xociiZx0T6+QB6p2HZpRj1qjBpoblq7sAExBiWszmCfy2V//ioNsHlqq6HEhDli6Ke9/OXqVLcY630wGo4O2LceiFIm33PnePZI1u1Ir/ohSeXW0x/aSTTxrWtXCc+cXT3D93vt4L5C573lCYPWIwnPYRYXkI+Fo6WS1YU50qdO9NSpT+py873wpNrYYbk/25s864Z5aUsoS1dM4tUSR9Q9mFa+ic2tJ1Gr4oxiTSvJ7YZdmcSqMnlL0FuNDZQuBG3XBTm45hAjT/uAEAO/QgheePWJVTiRimHmvtiY//2K95to8jNHX1R8XAcLad3z1drgf69oglClCZayItPRBzofTRLNJ1vVKEHiSAVcRQf6MrSsaaQal+qmCodOZwVQFc+HCgna3ue5ZKqVhufDqwiEZWBa+IjULAjN9P4UAQX5F6yPXRhjB8eNI6JxVFOL21BF51YWr+XcWa9n0nWMlSkxHFLWgt7NZGz7km9io+eLjOYJCgPWKbpwSE4Q4TWYxWyUnaPRJ7xp3GgIkxZeGkwJt1YT77byvW2V4+chvXllMzxcyHJIQV+pZX8KvEPAUpskoWxDjmcKgAtb7XqPcP7DlvEI8oVCC1XKhvagYGDmaahoewXVvM24i4dcy+hPW6rqq/gDTF/q9xdDTEKFZLP38hH+tV+ixHD6UE4nV44BfiruPANlbE6octZ7bvxIPhwNbCbj/ib9vnpysMs1fF1mkDTOBDuembSu2N5LwsCFAGpc9lWpoYl23VJa4g/ZUAEhXGP5Or4qv76jKR/qpDsC3qt7fSpzQxW8ATf0sYsO0nQwQvFlPUcQRDwg5D4nrmWdfvwafk43xE7F/8lSAqT2Zc3kqOjWVIIEPHt0Iqt/Jv4Gel9wlZ4lOXdvUCfVE1b9AN2NTmeOAMzNlhPMJZ22mpEFa37VPsduf2+TcWCh/PXClGiWPGRpbqYSEs3z9QAJ5AcS+b4fNsN7wGHGvTf8zp5dHPGH95JVq9OPAtjZifG/Rzc33iSjQESEi3Ip+HLSrCMh5GQiRqH89aiSCj/3wYdYOHNdngYn1TssgGc6MVgUTB7mg2Vf6+RRVbRsSXmkWUc6U4EGBG+vOfIG0MLwWMdDZ2U4e6eTVa7nUKbo6d3Z+KL5SLHP8sm5bmmWowzygAA" alt="Advanced Industrial Protective Apparel" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Protective+Gear+Image+Here'">
+                    <img src="https://th.bing.com/th/id/OIP.RzysFk45yXSglICCfQ1XCQHaHa?w=159&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Advanced Industrial Protective Apparel" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 5. EDII-TN Innovations -->
-    <section id="edii-detail" class="py-5 detail-section my-4">
+    <section id="edii-detail" class="detail-section">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-secondary mb-2">EDII-TN IVP Knowledge Partner</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">Technical Textiles & AI Pattern Innovations</h2>
+                    <span class="badge badge-custom mb-2">EDII-TN IVP Knowledge Partner</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Technical Textiles & AI Pattern Innovations</h2>
                     <p class="text-secondary">Providing research, mentoring, and technical guidance for multiple state-backed voucher projects.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>Miraypan Carbons:</strong> Carbon-based EMI shielding fabrics meeting Defence BSI standards (₹7 Lakh grant).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>Migara Med Fab:</strong> Activated carbon advanced wound dressings for rapid healing (₹3 Lakh grant).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>Essdi Infotech:</strong> Automatic pattern generation for garment manufacturing using AI (₹3 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>Miraypan Carbons:</strong> Carbon-based EMI shielding fabrics meeting Defence BSI standards (₹7 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>Migara Med Fab:</strong> Activated carbon advanced wound dressings for rapid healing (₹3 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>Essdi Infotech:</strong> Automatic pattern generation for garment manufacturing using AI (₹3 Lakh grant).</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image here. Example: assets/images/edii-innovations.jpg -->
-                    <img src="https://www.textileschool.com/wp-content/uploads/2025/08/AI-Driven-Textile-Design.avif" alt="Technical Textile & AI Innovations" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Tech+Innovations+Image+Here'">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Technical Textile & AI Innovations" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 6. Sustainable & Eco-Friendly R&D -->
-    <section id="eco-detail" class="py-5 bg-white detail-section my-4">
+    <section id="eco-detail" class="detail-section bg-alt">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge bg-dark mb-2">Sustainable R&D</span>
-                    <h2 class="fw-bold mb-3" style="color: #0b2240;">Eco-Friendly Dyeing & Wastewater Solutions</h2>
+                    <span class="badge badge-custom mb-2">Sustainable R&D</span>
+                    <h2 class="fw-bold mb-3" style="color: var(--text-dark);">Eco-Friendly Dyeing & Wastewater Solutions</h2>
                     <p class="text-secondary">Addressing ecological and industrial processing challenges through cutting-edge biological and chemical research.</p>
                     <ul class="list-unstyled text-secondary">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>JM Techy:</strong> Optimization and scaling of sustainable dyeing processes & auxiliaries (₹3 Lakh grant).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>Rangaa Mannar Nuans:</strong> Eco-friendly broad-spectrum bacterial consortium for industrial wastewater treatment (₹3 Lakh grant).</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> <strong>Harsa Industries:</strong> Movable mechanical compactor in spinning machines (₹3 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>JM Techy:</strong> Optimization and scaling of sustainable dyeing processes & auxiliaries (₹3 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>Rangaa Mannar Nuans:</strong> Eco-friendly broad-spectrum bacterial consortium for industrial wastewater treatment (₹3 Lakh grant).</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-dark me-2"></i> <strong>Harsa Industries:</strong> Movable mechanical compactor in spinning machines (₹3 Lakh grant).</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <!-- TODO: Add your custom image files here whenever you are ready -->
-                    <img src="data:image/webp;base64,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" alt="Sustainable Dyeing and Wastewater Research" class="img-fluid rounded-4 shadow-lg border" onerror="this.src='https://picsum.photos/800/600?text=Sustainable+R%26D+Image+Here'">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.tYiED8M10xEzvLf30gcnBQHaE8?r=0&pid=ImgDet&w=184&h=122&c=7&dpr=1.3&o=7&rm=3" alt="Sustainable Dyeing and Wastewater Research" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 text-center">
+    <footer class="py-4 text-center">
         <div class="container">
-            <p class="mb-0 small">&copy; 2026 AIC NIFT-TEA Incubation Centre. All rights reserved.</p>
+            <p class="mb-0 small text-white opacity-75">&copy; 2026 AIC NIFT-TEA Incubation Centre. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

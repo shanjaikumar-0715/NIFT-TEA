@@ -12,25 +12,115 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         html { scroll-behavior: smooth; }
-        .hero-section { background: linear-gradient(135deg, #0b2240 0%, #1a365d 100%); color: white; padding: 100px 0 60px 0; }
-        .badge-custom { background-color: #d4af37; color: #0b2240; font-weight: 600; }
-        .btn-primary-custom { background-color: #d4af37; border-color: #d4af37; color: #0b2240; font-weight: 600; }
-        .btn-primary-custom:hover { background-color: #c19b2e; border-color: #c19b2e; color: #0b2240; }
-        .contact-card { border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(11, 34, 64, 0.08); transition: transform 0.3s ease; }
-        .contact-card:hover { transform: translateY(-5px); }
-        .icon-box { width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.15); color: #0b2240; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.25rem; }
+        
+        /* Orange & Light Sandal / Cream Theme Palette */
+        :root {
+            --primary-orange: #ff6600;
+            --primary-orange-hover: #e55c00;
+            --light-sandal: #fdfbf7;
+            --light-sandal-alt: #f4efdb;
+            --text-dark: #1a1a1a;
+            --border-sandal: #e6dfcc;
+        }
+
+        body {
+            background-color: var(--light-sandal);
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
+        .navbar {
+            background-color: var(--light-sandal) !important;
+            border-bottom: 1px solid var(--border-sandal);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        /* Page Header: Warm Orange Gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 130px 0 90px 0;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .badge-custom {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-orange-hover);
+            border-color: var(--primary-orange-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Cards with Sandal Background */
+        .contact-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-sandal);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-orange) !important;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 102, 0, 0.1);
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            border-top: 3px solid var(--primary-orange);
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b2240;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <i class="fa-solid fa-graduation-cap text-warning fs-3 me-2"></i>
-                <span>NIFT-TEA <small class="d-block text-light opacity-75" style="font-size: 0.65rem;">CARE DIVISION</small></span>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -39,26 +129,26 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-warning btn-sm fw-bold text-dark active" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2 active" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="hero-section text-center mt-5">
+    <header class="hero-section text-center">
         <div class="container py-4">
-            <span class="badge badge-custom mb-3 px-3 py-2">Get in Touch</span>
-            <h1 class="display-4 fw-bold mb-3">Contact NIFT-TEA CARE Division</h1>
+            <span class="badge badge-custom mb-3">Get in Touch</span>
+            <h1 class="display-4 fw-bold mb-3 text-white">Contact NIFT-TEA CARE Division</h1>
             <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Have questions regarding apparel research, technical training, or MSME support? Reach out to our team directly.</p>
         </div>
     </header>
 
     <!-- Contact Details & Inquiry Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5" style="background-color: var(--light-sandal);">
         <div class="container py-4">
             <div class="row g-4 mb-5">
-                <!-- Phone Box (Updated with 8220434111) -->
+                <!-- Phone Box -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card contact-card p-4 h-100 text-center">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-phone"></i></div>
@@ -84,22 +174,22 @@
                         <p class="text-secondary small mb-0">9:30 AM – 5:30 PM</p>
                     </div>
                 </div>
-                <!-- Email Box (Updated with care@nifttea.in) -->
+                <!-- Email Box -->
                 <div class="col-md-6 col-lg-3">
                     <div class="card contact-card p-4 h-100 text-center">
                         <div class="icon-box mx-auto mb-3"><i class="fa-solid fa-envelope"></i></div>
                         <h4 class="h5 fw-bold text-dark">Email Address</h4>
                         <p class="text-secondary small mb-2"><a href="mailto:care@nifttea.in" class="text-decoration-none text-dark fw-semibold">care@nifttea.in</a></p>
-                        <a href="mailto:care@nifttea.in?subject=Inquiry%20Regarding%20CARE%20Division%20Support" class="btn btn-outline-primary btn-sm mt-auto">Send Inquiry</a>
+                        <a href="mailto:care@nifttea.in?subject=Inquiry%20Regarding%20CARE%20Division%20Support" class="btn btn-outline-dark btn-sm mt-auto">Send Inquiry</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Direct Inquiry Form / Mailto Integration (Updated to care@nifttea.in) -->
+            <!-- Direct Inquiry Form -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card border-0 shadow-lg p-5 rounded-4 bg-white">
-                        <h3 class="fw-bold mb-4 text-center" style="color: #0b2240;">Send an Official Inquiry</h3>
+                    <div class="card border-0 shadow-lg p-5 rounded-4 bg-white" style="border: 1px solid var(--border-sandal) !important;">
+                        <h3 class="fw-bold mb-4 text-center" style="color: var(--text-dark);">Send an Official Inquiry</h3>
                         <form action="mailto:care@nifttea.in" method="get" enctype="text/plain">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -132,9 +222,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 text-center">
+    <footer class="py-4 text-center">
         <div class="container">
-            <p class="mb-0 small">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved.</p>
+            <p class="mb-0 small text-white opacity-75">&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All rights reserved.</p>
         </div>
     </footer>
 

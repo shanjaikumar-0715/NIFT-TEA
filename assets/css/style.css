@@ -1,80 +1,86 @@
 /* ==========================================================================
    NIFT-TEA CARE Division - Official Theme Stylesheet
-   Matched with https://www.aicnifttea.org/ Design System
+   Updated to Orange and Light Sandal/Beige Theme Design System
    ========================================================================== */
 
 :root {
-  --nift-navy: #0b2240;      /* Official Deep Navy Blue */
-  --nift-blue-light: #1e3a8a; /* Accent Blue */
-  --nift-gold: #d4af37;       /* Corporate Gold / Yellow Accent */
-  --nift-dark: #0f172a;
-  --bg-light: #f8fafc;
-  --pure-white: #ffffff;
-  --text-main: #334155;
+  --primary-orange: #ff6600;       /* Vibrant Orange Theme Accent */
+  --primary-orange-hover: #e55c00;/* Darker Orange for Hover */
+  --light-sandal: #fdfbf7;        /* Clean Light Sandal Background */
+  --light-sandal-alt: #f4efdb;    /* Alternate Section Sandal Tone */
+  --text-dark: #1a1a1a;           /* Deep Charcoal for Headings/Text */
+  --text-muted: #64748b;          /* Muted Secondary Text */
+  --pure-white: #ffffff;          /* Pure White for Cards & Navbar */
+  --border-sandal: #e6dfcc;       /* Subtle Border Tone */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-main);
+  background-color: var(--light-sandal);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* Navbar - Official Navy Blue with Gold/White Accents */
+/* Navbar - Light Sandal Background with Dark Text & Orange Accents */
 .navbar {
-  background-color: var(--nift-navy) !important;
-  border-bottom: 3px solid var(--nift-gold);
-  box-shadow: 0 4px 12px rgba(11, 34, 64, 0.15);
+  background-color: var(--light-sandal) !important;
+  border-bottom: 2px solid var(--primary-orange);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.08);
   padding: 1rem 0;
 }
 
 .navbar-brand {
-  color: var(--pure-white) !important;
+  color: var(--text-dark) !important;
   font-weight: 800;
   letter-spacing: 0.5px;
 }
 
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
 .nav-link {
-  color: var(--pure-white) !important;
+  color: var(--text-dark) !important;
   font-weight: 600;
   transition: var(--transition-smooth);
   padding: 0.5rem 1rem !important;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--nift-gold) !important;
+  color: var(--primary-orange) !important;
 }
 
-/* Hero Section - Official Navy Gradient */
+/* Hero Section - Warm Dark/Orange Gradient */
 .hero-section {
-  background: linear-gradient(135deg, #0b2240 0%, #173b6c 100%);
+  background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
   color: var(--pure-white);
   padding: 130px 0 90px 0;
   position: relative;
   overflow: hidden;
-  border-bottom: 4px solid var(--nift-gold);
+  border-bottom: 4px solid var(--primary-orange);
 }
 
-/* Cards - Clean Corporate Glass/Solid Hybrid */
-.card-custom {
+/* Cards - Clean Corporate Sandal/White Hybrid */
+.card-custom, .card-glass, .contact-card, .clickable-card {
   background: var(--pure-white);
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-sandal);
   border-radius: 10px;
-  box-shadow: 0 10px 25px -5px rgba(11, 34, 64, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(255, 102, 0, 0.04);
   transition: var(--transition-smooth);
 }
 
-.card-custom:hover {
+.card-custom:hover, .card-glass:hover, .contact-card:hover, .clickable-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 35px -10px rgba(11, 34, 64, 0.12);
-  border-color: var(--nift-navy);
+  box-shadow: 0 20px 35px -10px rgba(255, 102, 0, 0.12);
+  border-color: var(--primary-orange);
 }
 
 /* Custom Buttons & Badges */
 .btn-primary-custom {
-  background-color: var(--nift-navy);
-  border: 2px solid var(--nift-navy);
+  background-color: var(--primary-orange);
+  border: 2px solid var(--primary-orange);
   color: var(--pure-white);
   padding: 0.75rem 1.75rem;
   border-radius: 6px;
@@ -83,19 +89,19 @@ body {
 }
 
 .btn-primary-custom:hover {
-  background-color: var(--nift-gold);
-  border-color: var(--nift-gold);
-  color: var(--nift-navy);
+  background-color: var(--primary-orange-hover);
+  border-color: var(--primary-orange-hover);
+  color: var(--pure-white);
   transform: translateY(-2px);
 }
 
 .badge-custom {
-  background-color: rgba(212, 175, 55, 0.15);
-  color: #997a15;
+  background-color: rgba(255, 102, 0, 0.15);
+  color: var(--primary-orange);
   font-weight: 700;
   padding: 0.5em 1em;
   border-radius: 4px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(255, 102, 0, 0.3);
 }
 
 /* Section Headers */
@@ -104,7 +110,7 @@ body {
   display: inline-block;
   margin-bottom: 3rem;
   font-weight: 800;
-  color: var(--nift-navy);
+  color: var(--text-dark);
 }
 
 .section-title::after {
@@ -114,11 +120,32 @@ body {
   bottom: -10px;
   width: 60px;
   height: 4px;
-  background-color: var(--nift-gold);
+  background-color: var(--primary-orange);
   border-radius: 2px;
+}
+
+/* Detail Sections */
+.detail-section {
+  scroll-margin-top: 100px;
+  background-color: var(--light-sandal);
+  color: var(--text-dark);
+  border-left: 5px solid var(--primary-orange);
+  border-bottom: 1px solid var(--border-sandal);
+  padding: 80px 0;
+}
+
+.detail-section.bg-alt {
+  background-color: var(--light-sandal-alt);
 }
 
 /* Tables */
 .table-hover tbody tr:hover {
-  background-color: rgba(11, 34, 64, 0.02);
+  background-color: rgba(255, 102, 0, 0.03);
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-dark);
+  color: var(--pure-white);
+  border-top: 3px solid var(--primary-orange);
 }
