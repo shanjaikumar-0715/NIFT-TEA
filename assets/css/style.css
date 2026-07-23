@@ -1,0 +1,124 @@
+/* ==========================================================================
+   NIFT-TEA CARE Division - Official Theme Stylesheet
+   Matched with https://www.aicnifttea.org/ Design System
+   ========================================================================== */
+
+:root {
+  --nift-navy: #0b2240;      /* Official Deep Navy Blue */
+  --nift-blue-light: #1e3a8a; /* Accent Blue */
+  --nift-gold: #d4af37;       /* Corporate Gold / Yellow Accent */
+  --nift-dark: #0f172a;
+  --bg-light: #f8fafc;
+  --pure-white: #ffffff;
+  --text-main: #334155;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Navbar - Official Navy Blue with Gold/White Accents */
+.navbar {
+  background-color: var(--nift-navy) !important;
+  border-bottom: 3px solid var(--nift-gold);
+  box-shadow: 0 4px 12px rgba(11, 34, 64, 0.15);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  color: var(--pure-white) !important;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: var(--pure-white) !important;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--nift-gold) !important;
+}
+
+/* Hero Section - Official Navy Gradient */
+.hero-section {
+  background: linear-gradient(135deg, #0b2240 0%, #173b6c 100%);
+  color: var(--pure-white);
+  padding: 130px 0 90px 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--nift-gold);
+}
+
+/* Cards - Clean Corporate Glass/Solid Hybrid */
+.card-custom {
+  background: var(--pure-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px -5px rgba(11, 34, 64, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px -10px rgba(11, 34, 64, 0.12);
+  border-color: var(--nift-navy);
+}
+
+/* Custom Buttons & Badges */
+.btn-primary-custom {
+  background-color: var(--nift-navy);
+  border: 2px solid var(--nift-navy);
+  color: var(--pure-white);
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--nift-gold);
+  border-color: var(--nift-gold);
+  color: var(--nift-navy);
+  transform: translateY(-2px);
+}
+
+.badge-custom {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: #997a15;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Section Headers */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  color: var(--nift-navy);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--nift-gold);
+  border-radius: 2px;
+}
+
+/* Tables */
+.table-hover tbody tr:hover {
+  background-color: rgba(11, 34, 64, 0.02);
+}

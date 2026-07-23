@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIC NIFT-TEA | Atal Incubation Centre for Textile & Apparel</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .clickable-card { cursor: pointer; transition: all 0.3s ease; }
+        .clickable-card:hover { transform: translateY(-5px); border-color: #d4af37 !important; box-shadow: 0 10px 20px rgba(11, 34, 64, 0.15); }
+        .detail-section { scroll-margin-top: 100px; background: #ffffff; border-left: 5px solid #0b2240; transition: all 0.4s ease-in-out; }
+        .hero-section { background: linear-gradient(135deg, #0b2240 0%, #1a365d 100%); color: white; padding: 100px 0 80px 0; }
+        .badge-custom { background-color: #d4af37; color: #0b2240; font-weight: 600; }
+        .btn-primary-custom { background-color: #d4af37; border-color: #d4af37; color: #0b2240; font-weight: 600; }
+        .btn-primary-custom:hover { background-color: #c19b2e; border-color: #c19b2e; color: #0b2240; }
+        /* Image container styling to prevent layout shift */
+        .img-container img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b2240;">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-lightbulb text-warning fs-3 me-2"></i>
+                <span>AIC NIFT-TEA <small class="d-block text-light opacity-75" style="font-size: 0.60rem;">INCUBATION CENTRE</small></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-3" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge badge-custom mb-3">Atal Incubation Centre - Supported by AIM, NITI Aayog</span>
+                    <h1 class="display-5 fw-bold mb-3">AIC NIFT-TEA Textile & Apparel Park</h1>
+                    <p class="lead text-light opacity-87 mb-4">Empowering textile and apparel startups through world-class incubation, advanced R&D prototyping, technical mentoring, and funding support in Tirupur.</p>
+                    <a href="services.html" class="btn btn-primary-custom me-2 px-4 py-2"><i class="fa-solid fa-arrow-right me-2"></i>Explore Activities</a>
+                    <a href="about.html" class="btn btn-outline-light px-4 py-2">About AIC</a>
+                </div>
+                <div class="col-lg-5 mt-4 mt-lg-0 text-center img-container">
+                    <!-- Added loading="lazy" and fast reliable fallback -->
+                    <img src="assets/images/loom1.jpg" alt="Advanced Textile Incubation Facility" class="img-fluid rounded-3 shadow-lg border border-secondary" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Focus Areas (4 Clickable Cards) -->
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center">
+                <h2 class="fw-bold mb-3" style="color: #0b2240;">Core Incubation Pillars</h2>
+                <p class="text-muted mb-5">Fostering innovation, entrepreneurship, and cutting-edge research in the textile ecosystem. Click any card to explore below.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="#rd-detail" class="text-decoration-none">
+                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
+                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-microscope"></i></div>
+                            <h4 class="h5 fw-bold text-dark">R&D & Prototyping</h4>
+                            <p class="text-muted small">New product & process research and technical prototyping support.</p>
+                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#ind-detail" class="text-decoration-none">
+                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
+                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-industry"></i></div>
+                            <h4 class="h5 fw-bold text-dark">Startup Industrialization</h4>
+                            <p class="text-muted small">Scaling innovative products and commercial manufacturing methods.</p>
+                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#diss-detail" class="text-decoration-none">
+                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
+                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-network-wired"></i></div>
+                            <h4 class="h5 fw-bold text-dark">Tech Dissemination</h4>
+                            <p class="text-muted small">Effective transfer of emerging technologies to startups and MSMEs.</p>
+                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#train-detail" class="text-decoration-none">
+                        <div class="card p-4 h-100 text-center clickable-card border-0 shadow-sm">
+                            <div class="mb-3 text-primary fs-1"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <h4 class="h5 fw-bold text-dark">Skill Upgradation</h4>
+                            <p class="text-muted small">Specialized technical training programs for entrepreneurs and workforce.</p>
+                            <span class="text-primary small fw-bold mt-auto pt-2">Read More <i class="fa-solid fa-arrow-down ms-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELABORATED CONTENT SECTIONS -->
+    
+    <section id="rd-detail" class="py-5 detail-section my-4">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge badge-custom mb-2">Pillar 01</span>
+                    <h2 class="fw-bold mb-3">R&D & Prototyping Support</h2>
+                    <p class="text-secondary">AIC NIFT-TEA provides robust incubation infrastructure for startups focusing on technical textiles, sustainable garments, and automated machinery prototypes.</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Development of automated prototypes like the Upgraded Mat Loom funded by DST.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Research on technical textiles including PBI-blended firefighter suits and carbon-based EMI shielding.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center img-container">
+                    <img src="assets/images/training1.jpg" alt="Incubation R&D Laboratory" class="img-fluid rounded-4 shadow-lg border" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillar 02: Startup Industrialization -->
+    <section id="ind-detail" class="py-5 detail-section my-4 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge badge-custom mb-2">Pillar 02</span>
+                    <h2 class="fw-bold mb-3">Startup Industrialization & Scaling</h2>
+                    <p class="text-secondary">Helping incubatees transition their laboratory innovations and prototypes into scalable, commercial industrial products for the Tirupur apparel ecosystem.</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Field deployment of upgraded automated looms and smart manufacturing tools.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Commercialization mentoring under state and central schemes like EDII-TN IVP and MSME Hackathons.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center img-container">
+                    <img src="data:image/webp;base64,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" alt="Industrial Scale Manufacturing" class="img-fluid rounded-4 shadow-lg border" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diss-detail" class="py-5 detail-section my-4">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge badge-custom mb-2">Pillar 03</span>
+                    <h2 class="fw-bold mb-3">Technology Dissemination & Mentorship</h2>
+                    <p class="text-secondary">Spreading industry awareness, transferring technical knowledge, and connecting startup founders with veteran apparel mentors and investors.</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Organizing startup bootcamps, investor meets, and Khadi & technical textile exhibitions.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Serving as a premier Knowledge Partner for institutional innovation missions.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center img-container">
+                    <img src="assets/images/meeting1.jpg" alt="Mentorship and Tech Dissemination" class="img-fluid rounded-4 shadow-lg border" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="train-detail" class="py-5 detail-section my-4 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge badge-custom mb-2">Pillar 04</span>
+                    <h2 class="fw-bold mb-3">Skill Upgradation & Training</h2>
+                    <p class="text-secondary">Equipping startup founders, industrial technicians, and self-help group members with advanced specialized technical competencies.</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> NABSKILL certified technician training programs for wastewater treatment and automated machinery.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Specialized apparel manufacturing and quality control workshops.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center img-container">
+                    <img src="assets/images/training1.jpg" alt="Technical Training Programs" class="img-fluid rounded-4 shadow-lg border" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 AIC NIFT-TEA Incubation Centre (Supported by AIM, NITI Aayog). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
