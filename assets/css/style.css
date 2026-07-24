@@ -1,44 +1,43 @@
 /* ==========================================================================
-   NIFT-TEA CARE Division - Official Theme Stylesheet
-   Updated to Orange and Light Sandal/Beige Theme Design System
+   NIFT-TEA CARE Division - Clean Professional Stylesheet
+   Theme: Vibrant Orange, Deep Navy & Warm Light Sandal
    ========================================================================== */
 
 :root {
-  --primary-orange: #ff6600;       /* Vibrant Orange Theme Accent */
-  --primary-orange-hover: #e55c00;/* Darker Orange for Hover */
-  --light-sandal: #fdfbf7;        /* Clean Light Sandal Background */
-  --light-sandal-alt: #f4efdb;    /* Alternate Section Sandal Tone */
-  --text-dark: #1a1a1a;           /* Deep Charcoal for Headings/Text */
-  --text-muted: #64748b;          /* Muted Secondary Text */
-  --pure-white: #ffffff;          /* Pure White for Cards & Navbar */
-  --border-sandal: #e6dfcc;       /* Subtle Border Tone */
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --primary-orange: #ff6600;
+  --primary-orange-hover: #e55c00;
+  --accent-navy: #0f172a;
+  --light-sandal: #fdfbf7;
+  --light-sandal-alt: #f4efdb;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --pure-white: #ffffff;
+  --border-sandal: #e6dfcc;
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: var(--light-sandal);
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* Navbar - Light Sandal Background with Dark Text & Orange Accents */
+/* Navbar & Logo */
 .navbar {
-  background-color: var(--light-sandal) !important;
-  border-bottom: 2px solid var(--primary-orange);
-  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.08);
-  padding: 1rem 0;
-}
-
-.navbar-brand {
-  color: var(--text-dark) !important;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  background-color: rgba(253, 251, 247, 0.96) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--primary-orange);
+  box-shadow: 0 4px 25px rgba(255, 102, 0, 0.1);
+  padding: 0.8rem 0;
 }
 
 .navbar-brand img {
-  max-height: 40px;
+  height: 48px;
   width: auto;
+  object-fit: contain;
 }
 
 .nav-link {
@@ -52,32 +51,29 @@ body {
   color: var(--primary-orange) !important;
 }
 
-/* Hero Section - Warm Dark/Orange Gradient */
+/* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: var(--pure-white);
-  padding: 130px 0 90px 0;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 4px solid var(--primary-orange);
+  padding: 150px 0 110px 0;
+  border-bottom: 5px solid var(--primary-orange);
 }
 
-/* Cards - Clean Corporate Sandal/White Hybrid */
-.card-custom, .card-glass, .contact-card, .clickable-card {
-  background: var(--pure-white);
+/* Cards */
+.clickable-card, .gallery-card, .card {
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border-sandal);
-  border-radius: 10px;
-  box-shadow: 0 10px 25px -5px rgba(255, 102, 0, 0.04);
+  border-radius: 12px;
   transition: var(--transition-smooth);
 }
 
-.card-custom:hover, .card-glass:hover, .contact-card:hover, .clickable-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 35px -10px rgba(255, 102, 0, 0.12);
+.clickable-card:hover, .gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(255, 102, 0, 0.15);
   border-color: var(--primary-orange);
 }
 
-/* Custom Buttons & Badges */
+/* Buttons & Badges */
 .btn-primary-custom {
   background-color: var(--primary-orange);
   border: 2px solid var(--primary-orange);
@@ -92,44 +88,22 @@ body {
   background-color: var(--primary-orange-hover);
   border-color: var(--primary-orange-hover);
   color: var(--pure-white);
-  transform: translateY(-2px);
 }
 
 .badge-custom {
-  background-color: rgba(255, 102, 0, 0.15);
+  background-color: rgba(255, 102, 0, 0.12);
   color: var(--primary-orange);
   font-weight: 700;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 102, 0, 0.3);
-}
-
-/* Section Headers */
-.section-title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 3rem;
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 60px;
-  height: 4px;
-  background-color: var(--primary-orange);
-  border-radius: 2px;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 102, 0, 0.25);
 }
 
 /* Detail Sections */
 .detail-section {
   scroll-margin-top: 100px;
   background-color: var(--light-sandal);
-  color: var(--text-dark);
-  border-left: 5px solid var(--primary-orange);
+  border-left: 6px solid var(--primary-orange);
   border-bottom: 1px solid var(--border-sandal);
   padding: 80px 0;
 }
@@ -138,14 +112,30 @@ body {
   background-color: var(--light-sandal-alt);
 }
 
-/* Tables */
-.table-hover tbody tr:hover {
-  background-color: rgba(255, 102, 0, 0.03);
+.feature-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-sandal);
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Footer */
 footer {
-  background-color: var(--text-dark);
+  background-color: var(--accent-navy);
   color: var(--pure-white);
-  border-top: 3px solid var(--primary-orange);
+  border-top: 4px solid var(--primary-orange);
+  padding: 30px 0;
 }

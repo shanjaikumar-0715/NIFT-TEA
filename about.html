@@ -3,102 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us & Leadership | NIFT-TEA CARE Division</title>
+    <title>About Us | NIFT-TEA CARE Division</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        html { scroll-behavior: smooth; }
-        
-        /* Orange & Light Sandal / Cream Theme Palette */
-        :root {
-            --primary-orange: #ff6600;
-            --primary-orange-hover: #e55c00;
-            --light-sandal: #fdfbf7;
-            --light-sandal-alt: #f4efdb;
-            --text-dark: #1a1a1a;
-            --border-sandal: #e6dfcc;
-        }
-
-        body {
-            background-color: var(--light-sandal);
-            color: var(--text-dark);
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        }
-
-        /* Navbar: Light Sandal Background with Dark Text & Orange Accents */
-        .navbar {
-            background-color: var(--light-sandal) !important;
-            border-bottom: 1px solid var(--border-sandal);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-        }
-        .navbar-brand img {
-            max-height: 40px;
-            width: auto;
-        }
-        .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-orange) !important;
-        }
-
-        /* Page Header: Warm Orange Gradient */
-        .hero-section {
-            background: linear-gradient(135deg, #261408 0%, #1a1a1a 100%);
-            color: #ffffff;
-            padding: 130px 0 90px 0;
-            border-bottom: 4px solid var(--primary-orange);
-        }
-
-        .badge-custom {
-            background-color: var(--primary-orange);
-            color: #ffffff;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 4px;
-        }
-
-        .btn-primary-custom {
-            background-color: var(--primary-orange);
-            border-color: var(--primary-orange);
-            color: #ffffff;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        .btn-primary-custom:hover {
-            background-color: var(--primary-orange-hover);
-            border-color: var(--primary-orange-hover);
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        /* Cards with Sandal Background */
-        .card-glass {
-            background-color: #ffffff;
-            border: 1px solid var(--border-sandal);
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
-        }
-        .card-glass:hover {
-            border-color: var(--primary-orange) !important;
-            transform: translateY(-4px);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-dark);
-            color: #ffffff;
-            border-top: 3px solid var(--primary-orange);
-        }
-    </style>
 </head>
 <body>
 
@@ -106,7 +17,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
+                <img src="assets/images/logo.png" alt="NIFT-TEA CARE Division Logo" class="img-fluid" onerror="this.src='https://www.aicnifttea.org/assets/aim-logo.png'">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -114,9 +25,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About & Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -127,66 +39,26 @@
     <header class="hero-section text-center">
         <div class="container py-4">
             <span class="badge badge-custom mb-3">Institutional Overview</span>
-            <h1 class="display-4 fw-bold mb-3 text-white">About CARE Division</h1>
-            <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Centre for Apparel Research and Education (CARE) at NIFT-TEA Knitwear Fashion Institute.</p>
+            <h1 class="display-4 fw-bold mb-3 text-white">About NIFT-TEA CARE Division</h1>
+            <p class="lead text-light opacity-87 mx-auto" style="max-width: 700px;">Empowering Tirupur's apparel, textile, and rural industries through state-of-the-art research, advanced technological support, and skill upgradation.</p>
         </div>
     </header>
 
-    <!-- About & Mission Section -->
+    <!-- About Content Section -->
     <section class="py-5" style="background-color: var(--light-sandal);">
         <div class="container py-4">
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-5 reveal">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="fw-bold mb-4" style="color: var(--text-dark);">Empowering Tirupur Industries Through Advanced R&D</h2>
-                    <p class="text-secondary">To strengthen the research capacity of Tirupur apparel, textile, and rural industries, NIFT-TEA active engagement goes beyond talent pool training. We provide comprehensive research and technology developmental support (new product/process R&D and dissemination) to MSMEs.</p>
-                    <p class="text-secondary">Our core objectives focus on technology upgradation training, industrialization of new processes, and fostering sustainable rural development initiatives.</p>
+                    <span class="badge badge-custom mb-2">Our Mission</span>
+                    <h2 class="fw-bold mb-3 text-dark">Driving Technical Evolution in Apparel</h2>
+                    <p class="text-secondary">The Centre for Apparel Research and Education (CARE) division at NIFT-TEA Knitwear Fashion Institute acts as a premier catalyst for MSMEs. We bridge the gap between advanced academic research and grassroots industrial manufacturing.</p>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Comprehensive R&D support for innovative apparel products and processes.</li>
+                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Grassroots skill development for rural artisans and global workforces.</li>
+                    </ul>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card card-glass p-4 border-0">
-                        <h4 class="fw-bold mb-3" style="color: var(--primary-orange);"><i class="fa-solid fa-bullseye me-2"></i>Our Key Objectives</h4>
-                        <ul class="list-unstyled mb-0 text-secondary">
-                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Research & Development on new products and technologies.</li>
-                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Industrialization of innovative manufacturing processes.</li>
-                            <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Dissemination of advanced technological standards.</li>
-                            <li class="mb-0"><i class="fa-solid fa-check text-success me-2"></i> Comprehensive technology upgradation training.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section class="py-5" style="background-color: var(--light-sandal-alt);">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title fw-bold" style="color: var(--text-dark);">Leadership & Guidance</h2>
-                <p class="text-muted">Visionary leadership steering the FY 2025–2026 milestones.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card card-glass p-4 text-center h-100">
-                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-user-tie"></i></div>
-                        <h4 class="fw-bold h5 text-dark">Sri S. R. Govindasamy</h4>
-                        <p class="text-muted small mb-2">Chairman</p>
-                        <p class="text-secondary small">Providing valuable institutional guidance and strategic direction for regional industrial growth.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-glass p-4 text-center h-100">
-                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-user-gear"></i></div>
-                        <h4 class="fw-bold h5 text-dark">Sri S. Senthilkumar</h4>
-                        <p class="text-muted small mb-2">R&D Committee Chairman</p>
-                        <p class="text-secondary small">Spearheading research committees and technology deployment frameworks.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-glass p-4 text-center h-100">
-                        <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-users-gear"></i></div>
-                        <h4 class="fw-bold h5 text-dark">Mr. S. Arulselvan & Team</h4>
-                        <p class="text-muted small mb-2">CARE Division Lead</p>
-                        <p class="text-secondary small">Successfully executing collaborative R&D projects and technical training programs for FY 2025–2026.</p>
-                    </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/images/overview.png" alt="About CARE Division Lab" class="img-fluid feature-img shadow-sm" loading="lazy">
                 </div>
             </div>
         </div>
@@ -201,5 +73,6 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://www.aicnifttea.org/assets/aim-logo.png" alt="AIC NIFT-TEA & AIM Logo" class="img-fluid">
+                <img src="assets/images/logo.png" alt="NIFT-TEA CARE Division Logo" class="img-fluid" onerror="this.src='https://www.aicnifttea.org/assets/aim-logo.png'">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -28,13 +28,14 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">R&D & Grants</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Innovations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom btn-sm px-4 py-2" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Training Image -->
+    <!-- Hero Section -->
     <header class="hero-section mt-5">
         <div class="container py-4">
             <div class="row align-items-center">
@@ -55,12 +56,12 @@
     <!-- Core Focus Areas (4 Cards linking to internal sections below via smooth scroll) -->
     <section id="focus-areas" class="py-5 bg-white">
         <div class="container py-4">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal">
                 <h2 class="fw-bold mb-2 text-dark">Core Focus Areas & Facilities</h2>
                 <p class="text-muted">Explore our specialized divisions driving technological evolution in Tirupur. Click any card to view details below.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 reveal">
                     <a href="#rd-detail" class="text-decoration-none">
                         <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-microscope"></i></div>
@@ -70,7 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 reveal">
                     <a href="#ind-detail" class="text-decoration-none">
                         <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-industry"></i></div>
@@ -80,7 +81,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 reveal">
                     <a href="#diss-detail" class="text-decoration-none">
                         <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-network-wired"></i></div>
@@ -90,7 +91,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 reveal">
                     <a href="#train-detail" class="text-decoration-none">
                         <div class="card p-4 h-100 text-center clickable-card shadow-sm border-0">
                             <div class="mb-3 fs-1" style="color: var(--primary-orange);"><i class="fa-solid fa-chalkboard-user"></i></div>
@@ -107,7 +108,7 @@
     <!-- DETAILED SECTIONS FOR SMOOTH SCROLLING -->
 
     <!-- 1. R&D Support Detail Section -->
-    <section id="rd-detail" class="detail-section">
+    <section id="rd-detail" class="detail-section reveal">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -127,7 +128,7 @@
     </section>
 
     <!-- 2. Industrialization Detail Section -->
-    <section id="ind-detail" class="detail-section bg-alt" style="background-color: var(--light-sandal-alt);">
+    <section id="ind-detail" class="detail-section bg-alt reveal">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -147,7 +148,7 @@
     </section>
 
     <!-- 3. Dissemination Detail Section -->
-    <section id="diss-detail" class="detail-section">
+    <section id="diss-detail" class="detail-section reveal">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -167,7 +168,7 @@
     </section>
 
     <!-- 4. Upgradation Training Detail Section -->
-    <section id="train-detail" class="detail-section bg-alt" style="background-color: var(--light-sandal-alt);">
+    <section id="train-detail" class="detail-section bg-alt reveal">
         <div class="container py-4">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -195,7 +196,6 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
